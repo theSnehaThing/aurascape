@@ -1280,8 +1280,14 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
+}
+
+/* Ensure content is above petals */
+header, main, footer {
+  position: relative;
+  z-index: 1;
 }
 
 .petal {

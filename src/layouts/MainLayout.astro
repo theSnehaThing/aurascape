@@ -54,9 +54,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "email": "hello@aurascape.in",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
+        "addressLocality": "Edinburgh",
+        "addressRegion": "Scotland",
+        "addressCountry": "GB"
       }
     }
   </script>
@@ -68,5 +68,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </main>
   <Footer />
   <CookieBanner />
+
+  <!-- Parallax Effect -->
+  <script>
+    function initParallax() {
+      const els = document.querySelectorAll('.hero-bg');
+      if (!els.length) return;
+
+      let ticking = false;
+      function update() {
+        const scrollY = window.scrollY;
+        els.forEach(el => {
+          const rect = el.parentElement.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const speed = 0.35;
+          const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * speed;
+          el.style.transform = `translateY(${offset}px)`;
+        });
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      update();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initParallax);
+    } else {
+      initParallax();
+    }
+  </script>
 </body>
 </html>

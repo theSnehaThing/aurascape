@@ -1,0 +1,124 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="About Us — Aura & Scape | Antima & Shilpa"
+  description="Meet Antima & Shilpa, the creative duo behind Aura & Scape. Learn about our journey, philosophy, and passion for creating magical event experiences."
+>
+  <!-- Hero -->
+  <section class="pt-24 md:pt-32 pb-12 bg-cream" aria-label="About hero">
+    <div class="container-site text-center">
+      <p class="font-script text-gold text-2xl md:text-3xl mb-3">Our Story</p>
+      <h1 class="font-serif text-4xl md:text-5xl text-teal-deep mb-4">About Aura & Scape</h1>
+      <div class="divider-gold" />
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="section bg-cream" aria-label="Our story">
+    <div class="container-site">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <img
+            src="/assets/hero/team.svg"
+            alt="Antima and Shilpa, founders of Aura and Scape"
+            class="w-full h-auto object-cover rounded-sm"
+            loading="lazy"
+            width="600"
+            height="750"
+          />
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="font-serif text-3xl text-teal-deep mb-4">Two Friends, One Dream</h2>
+          <p class="text-forest/80 leading-relaxed mb-4">
+            Aura & Scape was born from a simple belief: every celebration should
+            feel like a story worth remembering. We're Antima and Shilpa — two
+            friends who found their calling in the art of transformation.
+          </p>
+          <p class="text-forest/80 leading-relaxed mb-4">
+            What started as decorating a friend's intimate gathering grew into a
+            shared passion for crafting spaces that don't just look beautiful —
+            they make you <em>feel</em> something.
+          </p>
+          <p class="text-forest/80 leading-relaxed">
+            Today, we pour that same care into every event we touch. Whether it's
+            a grand wedding or a quiet anniversary, we bring the same energy:
+            attention to detail, a love of colour, and a genuine desire to see
+            your face when you walk into the space we've created.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section bg-ivory" aria-label="Our values">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="font-serif text-3xl md:text-4xl text-teal-deep mb-3">What Guides Us</h2>
+        <div class="divider-gold" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div class="text-center">
+          <h3 class="font-serif text-xl text-teal-deep mb-2">Dream First</h3>
+          <p class="text-forest/70 text-sm leading-relaxed">
+            We start with your vision, not our templates. Your event should feel
+            unmistakably yours.
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-xl text-teal-deep mb-2">Decorate with Heart</h3>
+          <p class="text-forest/70 text-sm leading-relaxed">
+            Every petal, every light, every drape is placed with intention.
+            Nothing is arbitrary. Everything is felt.
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-xl text-teal-deep mb-2">Celebrate Fully</h3>
+          <p class="text-forest/70 text-sm leading-relaxed">
+            We handle the logistics so you can be fully present in your
+            celebration. You live the moment. We guard the details.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-blush" aria-label="Contact CTA">
+    <div class="container-site text-center">
+      <h2 class="font-serif text-2xl md:text-3xl text-teal-deep mb-4">Let's Create Together</h2>
+      <p class="text-forest/70 max-w-md mx-auto mb-6">
+        Every great event starts with a conversation. Tell us what you're dreaming of.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block px-8 py-3 bg-teal-deep text-cream font-medium tracking-wide rounded-sm hover:bg-teal-mid transition-colors duration-200"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg-cream { background-color: #FFFDF5; }
+  .bg-ivory { background-color: #FDF8F0; }
+  .bg-blush { background-color: #F5E6E8; }
+  .text-teal-deep { color: #1B4D4A; }
+  .text-gold { color: #C9A96E; }
+  .text-forest { color: #2C3E3E; }
+  .text-forest\/80 { color: rgba(44, 62, 62, 0.8); }
+  .text-forest\/70 { color: rgba(44, 62, 62, 0.7); }
+  .text-cream { color: #FFFDF5; }
+  .bg-teal-deep { background-color: #1B4D4A; }
+  .hover\:bg-teal-mid:hover { background-color: #2D6B67; }
+  .font-serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .font-script { font-family: "Great Vibes", cursive; }
+  .divider-gold { width: 80px; height: 2px; background: linear-gradient(to right, transparent, #C9A96E, transparent); margin: 1.5rem auto; }
+  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .section { padding: 5rem 0; }
+  @media (max-width: 768px) { .section { padding: 3rem 0; } }
+</style>

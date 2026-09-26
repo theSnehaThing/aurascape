@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Arch frame -->
+  <path d="M20 100 C20 50, 60 20, 100 50" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+  <!-- A letter -->
+  <path d="M35 95 L50 40 L65 95" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="42" y1="75" x2="58" y2="75" stroke="#C9A96E" stroke-width="2"/>
+  <!-- S letter -->
+  <path d="M75 55 C75 50, 82 45, 88 50 C94 55, 88 62, 82 65 C76 68, 72 75, 78 80 C84 85, 90 80, 92 75" fill="none" stroke="#1B4D4A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Small flower accent -->
+  <circle cx="70" cy="35" r="3" fill="#E8C4C8"/>
+  <circle cx="76" cy="32" r="2.5" fill="#D4727E"/>
+  <circle cx="64" cy="32" r="2.5" fill="#E8C4C8"/>
+  <!-- Sparkle -->
+  <line x1="55" y1="85" x2="55" y2="92" stroke="#C9A96E" stroke-width="1.5"/>
+  <line x1="51.5" y1="88.5" x2="58.5" y2="88.5" stroke="#C9A96E" stroke-width="1.5"/>
+</svg>

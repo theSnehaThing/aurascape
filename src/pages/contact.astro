@@ -1,0 +1,231 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Contact Us — Aura & Scape | Plan Your Event"
+  description="Get in touch with Aura & Scape to plan your dream event. Tell us about your celebration and we'll get back to you within 24 hours."
+>
+  <!-- Hero -->
+  <section class="pt-24 md:pt-32 pb-8 bg-cream" aria-label="Contact header">
+    <div class="container-site text-center">
+      <p class="font-script text-gold text-2xl md:text-3xl mb-3">Say Hello</p>
+      <h1 class="font-serif text-4xl md:text-5xl text-teal-deep mb-4">Contact Us</h1>
+      <div class="divider-gold" />
+      <p class="text-forest/70 max-w-md mx-auto">
+        Tell us about your event. We'd love to hear your ideas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form + Info -->
+  <section class="section bg-ivory" aria-label="Contact form and information">
+    <div class="container-site">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+        <!-- Form -->
+        <div class="lg:col-span-3">
+          <h2 class="font-serif text-2xl text-teal-deep mb-6">Send Us an Inquiry</h2>
+
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="space-y-5"
+            id="contact-form"
+            novalidate
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-forest mb-1">Your Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-forest mb-1">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm"
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="phone" class="block text-sm font-medium text-forest mb-1">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm"
+                  placeholder="+91"
+                />
+              </div>
+              <div>
+                <label for="event-type" class="block text-sm font-medium text-forest mb-1">Event Type</label>
+                <select
+                  id="event-type"
+                  name="event_type"
+                  class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm"
+                >
+                  <option value="">Select a type</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="private">Private Celebration</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="event-date" class="block text-sm font-medium text-forest mb-1">Preferred Date</label>
+              <input
+                type="date"
+                id="event-date"
+                name="event_date"
+                class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-forest mb-1">Tell Us About Your Vision *</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="w-full px-4 py-3 border border-gold-light/50 rounded-sm bg-cream focus:outline-none focus:border-teal-deep transition-colors text-sm resize-none"
+                placeholder="Number of guests, venue (if you have one), theme ideas, colours you love, anything that comes to mind..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full sm:w-auto px-8 py-3 bg-teal-deep text-cream font-medium tracking-wide rounded-sm hover:bg-teal-mid transition-colors duration-200"
+            >
+              Send Inquiry
+            </button>
+
+            <p id="form-status" class="text-sm hidden" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="lg:col-span-2">
+          <h2 class="font-serif text-2xl text-teal-deep mb-6">Or Reach Us Directly</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-sm font-medium tracking-widest uppercase text-gold mb-1">Email</h3>
+              <a href="mailto:hello@aurascape.in" class="text-forest hover:text-teal-deep transition-colors">hello@aurascape.in</a>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-medium tracking-widest uppercase text-gold mb-1">Phone / WhatsApp</h3>
+              <a href="tel:+91XXXXXXXXXX" class="text-forest hover:text-teal-deep transition-colors">+91-XXXXX-XXXXX</a>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-medium tracking-widest uppercase text-gold mb-1">Based In</h3>
+              <p class="text-forest">Mumbai, Maharashtra</p>
+              <p class="text-forest/60 text-sm mt-1">Serving all of India</p>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-medium tracking-widest uppercase text-gold mb-1">Hours</h3>
+              <p class="text-forest">Mon – Sat: 10am – 7pm</p>
+              <p class="text-forest/60 text-sm mt-1">Sunday: By appointment</p>
+            </div>
+          </div>
+
+          <div class="mt-8 p-4 bg-gold-pale rounded-sm border border-gold-light/30">
+            <p class="text-sm text-forest leading-relaxed">
+              <strong>Planning timeline:</strong> We recommend reaching out at
+              least 4–6 weeks before your event for full planning, or 2 weeks
+              for decoration-only.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('form-status');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    // Basic validation
+    if (!data.get('name') || !data.get('email') || !data.get('message')) {
+      status!.textContent = 'Please fill in all required fields.';
+      status!.classList.remove('hidden');
+      status!.classList.add('text-rose');
+      return;
+    }
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        form.reset();
+        status!.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+        status!.classList.remove('hidden');
+        status!.classList.remove('text-rose');
+        status!.classList.add('text-teal-deep');
+      } else {
+        status!.textContent = 'Something went wrong. Please email us directly at hello@aurascape.in';
+        status!.classList.remove('hidden');
+        status!.classList.add('text-rose');
+      }
+    } catch {
+      status!.textContent = 'Network error. Please try again or email us directly.';
+      status!.classList.remove('hidden');
+      status!.classList.add('text-rose');
+    }
+  });
+</script>
+
+<style>
+  .bg-cream { background-color: #FFFDF5; }
+  .bg-ivory { background-color: #FDF8F0; }
+  .bg-gold-pale { background-color: #F5EDD8; }
+  .bg-teal-deep { background-color: #1B4D4A; }
+  .text-teal-deep { color: #1B4D4A; }
+  .text-gold { color: #C9A96E; }
+  .text-forest { color: #2C3E3E; }
+  .text-forest\/60 { color: rgba(44, 62, 62, 0.6); }
+  .text-forest\/70 { color: rgba(44, 62, 62, 0.7); }
+  .text-cream { color: #FFFDF5; }
+  .text-rose { color: #D4727E; }
+  .border-gold-light\/30 { border-color: rgba(232, 213, 176, 0.3); }
+  .border-gold-light\/50 { border-color: rgba(232, 213, 176, 0.5); }
+  .hover\:bg-teal-mid:hover { background-color: #2D6B67; }
+  .hover\:text-teal-deep:hover { color: #1B4D4A; }
+  .font-serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .font-script { font-family: "Great Vibes", cursive; }
+  .divider-gold { width: 80px; height: 2px; background: linear-gradient(to right, transparent, #C9A96E, transparent); margin: 1.5rem auto; }
+  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .section { padding: 5rem 0; }
+  @media (max-width: 768px) { .section { padding: 3rem 0; } }
+</style>

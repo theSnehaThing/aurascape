@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-teal-deep: #1B4D4A;
+  --color-teal-mid: #2D6B67;
+  --color-teal-light: #4A9B97;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E8D5B0;
+  --color-gold-pale: #F5EDD8;
+  --color-cream: #FFFDF5;
+  --color-ivory: #FDF8F0;
+  --color-blush: #F5E6E8;
+  --color-blush-deep: #E8C4C8;
+  --color-rose: #D4727E;
+  --color-forest: #2C3E3E;
+  --color-warm-white: #FDF8F0;
+  --color-sand: #F0E6D3;
+  --color-champagne: #F7EBD5;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --spacing-px: 1px;
+  --spacing-0.5: 2px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-forest);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-teal-deep);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Utility classes */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-teal {
+  color: var(--color-teal-deep);
+}
+
+.text-blush {
+  color: var(--color-blush-deep);
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.bg-ivory {
+  background-color: var(--color-ivory);
+}
+
+.bg-blush {
+  background-color: var(--color-blush);
+}
+
+.bg-gold-pale {
+  background-color: var(--color-gold-pale);
+}
+
+/* Decorative divider */
+.divider-gold {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+  margin: 1.5rem auto;
+}
+
+/* Section spacing */
+.section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Container */
+.container-site {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

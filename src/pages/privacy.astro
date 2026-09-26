@@ -1,0 +1,81 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Privacy Policy — Aura & Scape"
+  description="How Aura & Scape handles your data, cookies, and privacy."
+>
+  <section class="pt-24 md:pt-32 pb-8 bg-cream" aria-label="Privacy header">
+    <div class="container-site text-center">
+      <h1 class="font-serif text-4xl md:text-5xl text-teal-deep mb-4">Privacy Policy</h1>
+      <div class="divider-gold" />
+      <p class="text-forest/60 text-sm">Last updated: September 2025</p>
+    </div>
+  </section>
+
+  <section class="section bg-cream" aria-label="Privacy policy content">
+    <div class="container-site max-w-3xl">
+      <div class="prose-sm space-y-6 text-forest/80 leading-relaxed">
+        <h2 class="font-serif text-2xl text-teal-deep">What We Collect</h2>
+        <p>
+          We only collect information you choose to share with us through our
+          contact form: your name, email address, phone number, and any details
+          you include about your event.
+        </p>
+
+        <h2 class="font-serif text-2xl text-teal-deep">How We Use It</h2>
+        <p>
+          Your information is used solely to respond to your inquiry and discuss
+          your event. We do not sell, share, or distribute your personal data
+          to third parties.
+        </p>
+
+        <h2 class="font-serif text-2xl text-teal-deep">Cookies</h2>
+        <p>
+          This website uses a single cookie to remember your cookie consent
+          preference (accept or decline). This cookie is stored locally in your
+          browser and contains no personal information.
+        </p>
+        <p>
+          We do not use tracking cookies, advertising cookies, or analytics
+          tools that identify you.
+        </p>
+
+        <h2 class="font-serif text-2xl text-teal-deep">Third-Party Services</h2>
+        <p>
+          Our contact form is powered by Formspree. When you submit the form,
+          your data is transmitted to Formspree to deliver it to us. Formspree's
+          own privacy policy applies to their handling of that data in
+          transit.
+        </p>
+
+        <h2 class="font-serif text-2xl text-teal-deep">Your Rights</h2>
+        <p>
+          You can request access to, correction of, or deletion of any personal
+          data we hold about you by emailing hello@aurascape.in. We will
+          respond within 7 days.
+        </p>
+
+        <h2 class="font-serif text-2xl text-teal-deep">Contact</h2>
+        <p>
+          Questions about this policy? Email us at
+          <a href="mailto:hello@aurascape.in" class="text-teal-deep underline">hello@aurascape.in</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg-cream { background-color: #FFFDF5; }
+  .text-teal-deep { color: #1B4D4A; }
+  .text-forest { color: #2C3E3E; }
+  .text-forest\/80 { color: rgba(44, 62, 62, 0.8); }
+  .text-forest\/60 { color: rgba(44, 62, 62, 0.6); }
+  .font-serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .divider-gold { width: 80px; height: 2px; background: linear-gradient(to right, transparent, #C9A96E, transparent); margin: 1.5rem auto; }
+  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .section { padding: 5rem 0; }
+  @media (max-width: 768px) { .section { padding: 3rem 0; } }
+</style>

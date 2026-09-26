@@ -8,6 +8,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 >
   <!-- Hero -->
   <section class="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <h1>Where Memories Become Magic</h1>
       <p class="hero-subtitle">DREAM &bull; DECORATE &bull; CELEBRATE</p>
@@ -191,11 +193,22 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .hero-bg {
-    display: none;
+    position: absolute;
+    inset: -35% 0;
+    background: url('/assets/hero/hero-bg.jpg?v=1') center / cover no-repeat;
+    pointer-events: none;
+    will-change: transform;
   }
 
   .hero-overlay {
-    display: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(251, 248, 243, 0.40) 0%,
+      rgba(251, 248, 243, 0.18) 40%,
+      rgba(251, 248, 243, 0.55) 78%,
+      var(--bg-primary) 100%);
+    pointer-events: none;
   }
 
   .hero-content {

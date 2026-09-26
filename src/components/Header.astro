@@ -2,26 +2,24 @@
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/#services', label: 'Services' },
-  { href: '/gallery', label: 'Portfolio' },
-  { href: '/contact', label: 'Enquire' },
+  { href: '/services', label: 'Services' },
+  { href: '/portfolio', label: 'Gallery' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const { pathname } = Astro.url;
 ---
 
 <header class="header">
-  <div class="container header-inner">
+  <div class="header-inner">
     <a href="/" class="logo" aria-label="Aura and Scape - Home">
-      <img src="/assets/logos/logo.svg" alt="Aura & Scape" width="140" height="100" />
+      <img src="/assets/logos/logo.svg" alt="Aura & Scape" width="160" height="120" />
     </a>
 
     <nav>
       <ul class="nav">
         {navLinks.map((link) => (
-          <li>
-            <a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a>
-          </li>
+          <li><a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a></li>
         ))}
         <li><a href="/contact" class="btn">Enquire</a></li>
       </ul>
@@ -37,9 +35,7 @@ const { pathname } = Astro.url;
   <div class="mobile-menu" id="mobile-menu">
     <ul>
       {navLinks.map((link) => (
-        <li>
-          <a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a>
-        </li>
+        <li><a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a></li>
       ))}
       <li><a href="/contact" class="btn">Enquire</a></li>
     </ul>

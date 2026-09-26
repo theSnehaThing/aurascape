@@ -3,24 +3,33 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout
-  title="About Us — Aura & Scape | Antima & Shilpa"
-  description="Meet Antima & Shilpa, the creative duo behind Aura & Scape. Learn about our journey, philosophy, and passion for creating magical event experiences."
+  title="About Us - Aura & Scape"
+  description="Meet Antima & Shilpa, the creative duo behind Aura & Scape. Luxury event planning and decoration in Edinburgh, Scotland."
 >
-  <section class="page-hero bg-cream" aria-label="About header">
-    <div class="container">
-      <span class="font-script">Our Story</span>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container text-center">
       <h1>About Aura & Scape</h1>
       <div class="divider"></div>
+      <p class="text-muted" style="max-width: 500px; margin: 16px auto 0;">Two friends, one dream — making every celebration feel like a story worth remembering.</p>
     </div>
   </section>
 
-  <!-- Story -->
-  <section class="section bg-cream" aria-label="Our story">
+  <!-- Founders -->
+  <section class="section section--cream">
     <div class="container">
-      <div class="about-grid">
+      <div class="about-grid reveal">
         <div class="about-photos">
-          <img src="/assets/hero/antima.jpg" alt="Antima, co-founder of Aura and Scape" loading="lazy" width="280" height="350" />
-          <img src="/assets/hero/shilpa.jpg" alt="Shilpa, co-founder of Aura and Scape" loading="lazy" width="280" height="350" />
+          <div class="founder">
+            <img src="/assets/hero/antima.jpg" alt="Antima, co-founder of Aura and Scape" class="founder-photo" width="240" height="240" loading="lazy" />
+            <h3>Antima</h3>
+            <p class="text-muted">Co-Founder</p>
+          </div>
+          <div class="founder">
+            <img src="/assets/hero/shilpa.jpg" alt="Shilpa, co-founder of Aura and Scape" class="founder-photo" width="240" height="240" loading="lazy" />
+            <h3>Shilpa</h3>
+            <p class="text-muted">Co-Founder</p>
+          </div>
         </div>
         <div class="about-text">
           <h2>Two Friends, One Dream</h2>
@@ -32,24 +41,34 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
+  <!-- Quote -->
+  <section class="section section--rose">
+    <div class="container text-center">
+      <blockquote class="founder-quote">
+        "Where creativity meets elegance, and every celebration becomes an unforgettable experience."
+      </blockquote>
+    </div>
+  </section>
+
   <!-- Values -->
-  <section class="section bg-ivory" aria-label="Our values">
+  <section class="section section--cream">
     <div class="container">
-      <div class="text-center">
+      <div class="section-heading">
+        <span class="section-line"></span>
         <h2>What Guides Us</h2>
-        <div class="divider"></div>
+        <span class="section-line"></span>
       </div>
 
-      <div class="values-grid">
-        <div class="value">
+      <div class="values-grid reveal-stagger">
+        <div class="value-card">
           <h3>Dream First</h3>
           <p>We start with your vision, not our templates. Your event should feel unmistakably yours.</p>
         </div>
-        <div class="value">
+        <div class="value-card">
           <h3>Decorate with Heart</h3>
           <p>Every petal, every light, every drape is placed with intention. Nothing is arbitrary. Everything is felt.</p>
         </div>
-        <div class="value">
+        <div class="value-card">
           <h3>Celebrate Fully</h3>
           <p>We handle the logistics so you can be fully present in your celebration. You live the moment. We guard the details.</p>
         </div>
@@ -58,14 +77,15 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- Journey -->
-  <section class="section bg-cream" aria-label="Our journey">
+  <section class="section section--rose">
     <div class="container">
-      <div class="text-center">
+      <div class="section-heading">
+        <span class="section-line"></span>
         <h2>How We Got Here</h2>
-        <div class="divider"></div>
+        <span class="section-line"></span>
       </div>
 
-      <div class="timeline">
+      <div class="timeline reveal-stagger">
         <div class="timeline-item">
           <h3>The Spark</h3>
           <p>Antima decorated Shilpa's sister's engagement on a tight budget. The photos went viral in their friend group. The next request came that weekend.</p>
@@ -87,32 +107,147 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- CTA -->
-  <section class="section bg-blush" aria-label="Contact CTA">
+  <section class="section section--cream">
     <div class="container text-center">
       <h2>Let's Create Together</h2>
-      <p class="text-forest-light max-w-lg mx-auto" style="margin: 1rem auto 1.5rem;">Every great event starts with a conversation. Tell us what you're dreaming of.</p>
-      <a href="/contact" class="btn">Get in Touch</a>
+      <p class="text-muted" style="max-width: 480px; margin: 16px auto 32px;">Every great event starts with a conversation. Tell us what you're dreaming of.</p>
+      <a href="/contact" class="btn-primary">Get in Touch</a>
     </div>
   </section>
 </MainLayout>
 
 <style>
-  .about-photos {
+  .page-hero {
+    padding: 120px 48px 60px;
+    background: var(--bg-primary);
+  }
+
+  @media (max-width: 768px) {
+    .page-hero { padding: 100px 20px 40px; }
+  }
+
+  .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 64px;
+    align-items: center;
   }
 
-  .about-photos img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .about-photos {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .about-photos { flex-direction: column; align-items: center; gap: 24px; }
+  }
+
+  .founder {
+    text-align: center;
+  }
+
+  .founder-photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 3px solid var(--accent-gold);
+    padding: 6px;
+    margin-bottom: 16px;
   }
 
-  @media (max-width: 600px) {
-    .about-photos {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 768px) {
+    .founder-photo { width: 180px; height: 180px; }
+  }
+
+  .founder h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+
+  .about-text h2 {
+    margin-bottom: 24px;
+  }
+
+  .about-text p {
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .founder-quote {
+    background: var(--bg-secondary);
+    padding: 32px 48px;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 0 12px 12px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .founder-quote { padding: 24px 24px; font-size: 17px; }
+  }
+
+  /* Values */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+
+  .value-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-rose);
+    border-radius: 12px;
+    padding: 40px 28px;
+    text-align: center;
+  }
+
+  .value-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .value-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  /* Timeline */
+  .timeline {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .timeline-item {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+
+  .timeline-item h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+  }
+
+  .timeline-item p {
+    font-size: 15px;
+    color: var(--text-muted);
   }
 </style>

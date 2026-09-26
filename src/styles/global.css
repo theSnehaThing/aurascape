@@ -64,7 +64,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   background-image:
     url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.08'%3E%3Cpath d='M100 300c0-50 30-80 60-80s60 30 60 80-30 80-60 80-60-30-60-80z'/%3E%3Cpath d='M400 150c0-40 25-65 50-65s50 25 50 65-25 65-50 65-50-25-50-65z'/%3E%3Cpath d='M250 450c0-35 20-55 40-55s40 20 40 55-20 55-40 55-40-20-40-55z'/%3E%3Ccircle cx='500' cy='400' r='30'/%3E%3Ccircle cx='150' cy='100' r='20'/%3E%3C/g%3E%3C/svg%3E"),
     radial-gradient(ellipse at 20% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
@@ -1286,18 +1286,19 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
   }
 }
 
-/* Floating petals container - BEHIND everything */
+/* Floating petals: above background, below content */
 .petals {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
 }
 
-/* Ensure content is above petals */
+/* Content: above petals */
 header, main, footer {
   position: relative;
+  z-index: 2;
 }
 
 .petal {

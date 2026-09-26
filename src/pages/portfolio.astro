@@ -2,18 +2,18 @@
 import MainLayout from '../layouts/MainLayout.astro';
 
 const photos = [
-  { src: '/assets/gallery/1.jpg', alt: 'Floral arch with cascading roses and greenery', category: 'wedding' },
-  { src: '/assets/gallery/2.jpg', alt: 'Elegant table setting with candlelight and place cards', category: 'corporate' },
-  { src: '/assets/gallery/3.jpg', alt: 'Champagne-toned candlelight over a dinner table', category: 'private' },
-  { src: '/assets/gallery/4.jpg', alt: 'Ornate crystal chandelier in warm light', category: 'wedding' },
-  { src: '/assets/gallery/5.jpg', alt: 'Blush pink rose in soft focus', category: 'wedding' },
-  { src: '/assets/gallery/6.jpg', alt: 'Soft pink peony in close-up', category: 'wedding' },
-  { src: '/assets/gallery/7.jpg', alt: 'Golden fairy lights glowing in glass jars', category: 'corporate' },
-  { src: '/assets/gallery/8.jpg', alt: 'Delicate white lily arrangement', category: 'wedding' },
-  { src: '/assets/gallery/9.jpg', alt: 'Peach roses in a soft bouquet', category: 'private' },
-  { src: '/assets/gallery/10.jpg', alt: 'Crystal chandelier detail', category: 'corporate' },
-  { src: '/assets/gallery/11.jpg', alt: 'Ivory wedding cake with delicate lace detailing', category: 'wedding' },
-  { src: '/assets/gallery/12.jpg', alt: 'Warm bamboo pendant lanterns', category: 'private' },
+  { src: '/assets/gallery/1.jpg', alt: 'Cluster of pink roses in soft light', category: 'wedding' },
+  { src: '/assets/gallery/2.jpg', alt: 'Elegant place setting with monogram card and leaf', category: 'corporate' },
+  { src: '/assets/gallery/3.jpg', alt: 'Candlelit table with swan-folded napkins', category: 'private' },
+  { src: '/assets/gallery/4.jpg', alt: 'Crystal chandelier with lit candles', category: 'wedding' },
+  { src: '/assets/gallery/5.jpg', alt: 'Blush rose in soft focus', category: 'wedding' },
+  { src: '/assets/gallery/6.jpg', alt: 'Soft pink peony in bloom', category: 'wedding' },
+  { src: '/assets/gallery/7.jpg', alt: 'Warm fairy lights strung through a garden', category: 'corporate' },
+  { src: '/assets/gallery/8.jpg', alt: 'Delicate pink-striped lily', category: 'wedding' },
+  { src: '/assets/gallery/9.jpg', alt: 'Peach rose with fresh buds', category: 'private' },
+  { src: '/assets/gallery/10.jpg', alt: 'Starburst chandelier over patterned wallpaper', category: 'corporate' },
+  { src: '/assets/gallery/11.jpg', alt: 'Elegant white tiered wedding cake', category: 'wedding' },
+  { src: '/assets/gallery/12.jpg', alt: 'Moss-covered stone garden lantern', category: 'private' },
 ];
 ---
 
@@ -43,8 +43,8 @@ const photos = [
       <div class="gallery-grid reveal-stagger" id="gallery-grid">
         {photos.map((photo) => (
           <div class="gallery-item" data-category={photo.category}>
-            <button class="gallery-open" type="button" aria-label={`View larger: ${photo.alt}`} data-full={`${photo.src}?v=3`} data-caption={photo.alt}>
-              <img src={`${photo.src}?v=3`} alt={photo.alt} loading="lazy" width="400" height="400" />
+            <button class="gallery-open" type="button" aria-label={`View larger: ${photo.alt}`} data-full={`${photo.src}?v=4`} data-caption={photo.alt}>
+              <img src={`${photo.src}?v=4`} alt={photo.alt} loading="lazy" width="400" height="400" />
             </button>
           </div>
         ))}

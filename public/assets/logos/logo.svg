@@ -1,29 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120">
-  <!-- Large flowing S (script style) -->
-  <path d="M82 22 C72 22, 64 28, 64 36 C64 44, 72 48, 80 50 C88 52, 96 56, 96 64 C96 72, 88 78, 78 78 C70 78, 64 74, 62 68" fill="none" stroke="#1B4D4A" stroke-width="3" stroke-linecap="round"/>
+  <!-- Large flowing S (proper orientation) -->
+  <path d="M 95 25 C 75 12, 55 18, 55 35 C 55 52, 75 55, 85 60 C 95 65, 95 80, 75 85 C 60 89, 50 82, 48 75" fill="none" stroke="#1C3B32" stroke-width="3" stroke-linecap="round"/>
   <!-- Smaller A (serif style) -->
-  <path d="M38 72 L48 32 L58 72" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="42" y1="58" x2="54" y2="58" stroke="#C9A96E" stroke-width="2"/>
+  <path d="M38 72 L48 32 L58 72" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="42" y1="58" x2="54" y2="58" stroke="#D4AF37" stroke-width="2"/>
   
-  <!-- AURA text (hand-drawn paths for consistency) -->
-  <text x="72" y="92" font-family="serif" font-size="9" letter-spacing="2" fill="#1B4D4A" text-anchor="middle" style="font-variant: small-caps;">AURA</text>
-  <text x="72" y="102" font-family="serif" font-size="7" letter-spacing="3" fill="#1B4D4A" text-anchor="middle">AND</text>
-  <text x="72" y="113" font-family="serif" font-size="9" letter-spacing="2" fill="#1B4D4A" text-anchor="middle" style="font-variant: small-caps;">SCAPE</text>
+  <!-- AURA text -->
+  <text x="72" y="96" font-family="serif" font-size="9" letter-spacing="2" fill="#1C3B32" text-anchor="middle">AURA</text>
+  <text x="72" y="106" font-family="serif" font-size="7" letter-spacing="3" fill="#1C3B32" text-anchor="middle">AND</text>
+  <text x="72" y="116" font-family="serif" font-size="9" letter-spacing="2" fill="#1C3B32" text-anchor="middle">SCAPE</text>
   
   <!-- Floral cluster - top -->
-  <circle cx="52" cy="14" r="3.5" fill="#E8788A"/>
-  <circle cx="58" cy="10" r="3" fill="#F2A0B0"/>
-  <circle cx="46" cy="10" r="2.5" fill="#D4727E"/>
-  <circle cx="55" cy="18" r="2" fill="#F2A0B0"/>
-  <!-- Petals -->
-  <ellipse cx="52" cy="14" rx="4" ry="2" fill="none" stroke="#D4727E" stroke-width="0.5" transform="rotate(-20 52 14)"/>
-  <ellipse cx="58" cy="10" rx="3.5" ry="1.8" fill="none" stroke="#E8788A" stroke-width="0.5" transform="rotate(15 58 10)"/>
+  <circle cx="52" cy="12" r="3.5" fill="#D9A2A8"/>
+  <circle cx="58" cy="8" r="3" fill="#E8C4C8"/>
+  <circle cx="46" cy="8" r="2.5" fill="#D9A2A8"/>
+  <circle cx="55" cy="16" r="2" fill="#E8C4C8"/>
+  <ellipse cx="52" cy="12" rx="4" ry="2" fill="none" stroke="#D9A2A8" stroke-width="0.5" transform="rotate(-20 52 12)"/>
+  <ellipse cx="58" cy="8" rx="3.5" ry="1.8" fill="none" stroke="#E8C4C8" stroke-width="0.5" transform="rotate(15 58 8)"/>
   <!-- Stems and leaves -->
-  <path d="M50 20 Q48 26, 44 30" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
-  <path d="M56 20 Q58 26, 62 28" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
-  <ellipse cx="44" cy="30" rx="2" ry="3.5" fill="#5A8C6A" transform="rotate(-25 44 30)"/>
-  <ellipse cx="62" cy="28" rx="2" ry="3.5" fill="#7BA888" transform="rotate(20 62 28)"/>
+  <path d="M50 18 Q48 24, 44 28" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
+  <path d="M56 18 Q58 24, 62 26" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
+  <ellipse cx="44" cy="28" rx="2" ry="3.5" fill="#5A8C6A" transform="rotate(-25 44 28)"/>
+  <ellipse cx="62" cy="26" rx="2" ry="3.5" fill="#7BA888" transform="rotate(20 62 26)"/>
   <!-- Small buds -->
-  <circle cx="42" cy="16" r="1.5" fill="#F2A0B0"/>
-  <circle cx="62" cy="14" r="1.5" fill="#E8788A"/>
+  <circle cx="42" cy="14" r="1.5" fill="#E8C4C8"/>
+  <circle cx="62" cy="12" r="1.5" fill="#D9A2A8"/>
 </svg>

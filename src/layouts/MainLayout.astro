@@ -43,6 +43,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="canonical" href={canonicalURL} />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
 
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-stagger > * {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",

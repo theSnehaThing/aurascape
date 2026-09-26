@@ -2,18 +2,18 @@
 import MainLayout from '../layouts/MainLayout.astro';
 
 const photos = [
-  { src: '/assets/gallery/1.jpg', alt: 'Elegant floral wedding arch with pastel blooms' },
-  { src: '/assets/gallery/2.jpg', alt: 'Luxurious event table setting with gold accents' },
-  { src: '/assets/gallery/3.jpg', alt: 'Romantic candlelit dinner with floral centrepieces' },
-  { src: '/assets/gallery/4.jpg', alt: 'Grand ballroom decorated with draping and lights' },
-  { src: '/assets/gallery/5.jpg', alt: 'Pastel flower arrangements for a spring wedding' },
-  { src: '/assets/gallery/6.jpg', alt: 'Elegant ceremony backdrop with fresh flowers' },
-  { src: '/assets/gallery/7.jpg', alt: 'Outdoor event with fairy lights and greenery' },
-  { src: '/assets/gallery/8.jpg', alt: 'Statement floral installation for a reception' },
-  { src: '/assets/gallery/9.jpg', alt: 'Intimate anniversary dinner with roses' },
-  { src: '/assets/gallery/10.jpg', alt: 'Grand entrance with floral columns' },
-  { src: '/assets/gallery/11.jpg', alt: 'Elegant cake table with gold detailing' },
-  { src: '/assets/gallery/12.jpg', alt: 'Garden party setup with pastel draping' },
+  { src: '/assets/gallery/1.jpg', alt: 'Elegant floral wedding arch with pastel blooms', category: 'wedding' },
+  { src: '/assets/gallery/2.jpg', alt: 'Luxurious event table setting with gold accents', category: 'corporate' },
+  { src: '/assets/gallery/3.jpg', alt: 'Romantic candlelit dinner with floral centrepieces', category: 'private' },
+  { src: '/assets/gallery/4.jpg', alt: 'Grand ballroom decorated with draping and lights', category: 'wedding' },
+  { src: '/assets/gallery/5.jpg', alt: 'Pastel flower arrangements for a spring wedding', category: 'wedding' },
+  { src: '/assets/gallery/6.jpg', alt: 'Elegant ceremony backdrop with fresh flowers', category: 'wedding' },
+  { src: '/assets/gallery/7.jpg', alt: 'Outdoor event with fairy lights and greenery', category: 'corporate' },
+  { src: '/assets/gallery/8.jpg', alt: 'Statement floral installation for a reception', category: 'wedding' },
+  { src: '/assets/gallery/9.jpg', alt: 'Intimate anniversary dinner with roses', category: 'private' },
+  { src: '/assets/gallery/10.jpg', alt: 'Grand entrance with floral columns', category: 'corporate' },
+  { src: '/assets/gallery/11.jpg', alt: 'Elegant cake table with gold detailing', category: 'wedding' },
+  { src: '/assets/gallery/12.jpg', alt: 'Garden party setup with pastel draping', category: 'private' },
 ];
 ---
 
@@ -40,13 +40,17 @@ const photos = [
         <button class="filter-btn" data-filter="private">Private</button>
       </div>
 
-      <div class="gallery-grid reveal-stagger">
+      <div class="gallery-grid reveal-stagger" id="gallery-grid">
         {photos.map((photo) => (
-          <div class="gallery-item">
-            <img src={photo.src} alt={photo.alt} loading="lazy" width="400" height="400" />
+          <div class="gallery-item" data-category={photo.category}>
+            <button class="gallery-open" type="button" aria-label={`View larger: ${photo.alt}`} data-full={photo.src} data-caption={photo.alt}>
+              <img src={photo.src} alt={photo.alt} loading="lazy" width="400" height="400" />
+            </button>
           </div>
         ))}
       </div>
+
+      <p class="gallery-empty" id="gallery-empty" hidden>No events in this category yet.</p>
     </div>
   </section>
 
@@ -58,6 +62,15 @@ const photos = [
       <a href="/contact" class="btn-primary">Start Planning</a>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+    <figure>
+      <img id="lightbox-img" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
 </MainLayout>
 
 <style>
@@ -132,11 +145,137 @@ const photos = [
 </style>
 
 <script>
+  // --- Category filter ---
+  const grid = document.getElementById('gallery-grid');
+  const items = Array.from(grid?.querySelectorAll('.gallery-item') ?? []);
+  const emptyMsg = document.getElementById('gallery-empty');
+
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelector('.filter-btn.active')?.classList.remove('active');
       btn.classList.add('active');
-      // Filter logic would go here when categories are assigned
+      const filter = btn.dataset.filter;
+      let visible = 0;
+      items.forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (emptyMsg) emptyMsg.hidden = visible > 0;
     });
   });
+
+  // --- Lightbox ---
+  const lightbox = document.querySelector('.lightbox');
+  if (lightbox) document.body.appendChild(lightbox); // escape <main>'s stacking context (z-index: 2)
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  let lastFocused = null;
+
+  function openLightbox(src, caption) {
+    if (!lightbox || !lightboxImg) return;
+    lastFocused = document.activeElement;
+    lightboxImg.src = src;
+    lightboxImg.alt = caption;
+    lightboxCaption.textContent = caption;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightbox.querySelector('.lightbox-close')?.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    lastFocused?.focus();
+  }
+
+  document.querySelectorAll('.gallery-open').forEach(btn => {
+    btn.addEventListener('click', () => openLightbox(btn.dataset.full, btn.dataset.caption));
+  });
+
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.closest('.lightbox-close')) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
+  });
 </script>
+
+<style>
+  .gallery-open {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+
+  .gallery-empty {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 32px 0;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(20, 26, 24, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .lightbox[hidden] {
+    display: none;
+  }
+
+  .lightbox figure {
+    margin: 0;
+    max-width: min(90vw, 900px);
+    text-align: center;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 78vh;
+    margin: 0 auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .lightbox figcaption {
+    margin-top: 14px;
+    color: var(--bg-primary);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 253, 245, 0.4);
+    color: var(--bg-primary);
+    font-size: 22px;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-close:focus-visible {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: var(--white);
+  }
+
+</style>

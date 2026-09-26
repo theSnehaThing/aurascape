@@ -6,24 +6,20 @@ import MainLayout from '../layouts/MainLayout.astro';
   title="Aura & Scape - Events, Decor, Experiences"
   description="Aura & Scape — Where creativity meets elegance. Events, Decor, Experiences by Antima & Shilpa. Edinburgh, Scotland."
 >
-  <!-- Hero — uses brand banner image -->
+  <!-- Hero -->
   <section class="hero" aria-label="Hero">
-    <img src="/assets/hero/hero-banner.jpg" alt="Where Memories Become Magic" class="hero-banner" loading="eager" width="717" height="327" />
-    <div class="hero-cta">
+    <img src="/assets/hero/hero-bg.jpg" alt="" class="hero-bg" loading="eager" width="1920" height="1080" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Where Memories Become Magic</h1>
+      <p class="hero-subtitle">DREAM &bull; DECORATE &bull; CELEBRATE</p>
       <a href="/contact" class="btn-primary">Book a Consultation</a>
     </div>
   </section>
 
-  <!-- Sub-banner strip -->
-  <div class="sub-banner-strip">
-    <img src="/assets/hero/dream-banner.jpg" alt="Dream, Decorate, Celebrate" loading="lazy" width="327" height="123" />
-    <img src="/assets/hero/intro-banner.jpg" alt="Introducing Aura & Scape" loading="lazy" width="390" height="123" />
-  </div>
-
-  <!-- Services -->
+  <!-- Services Preview -->
   <section class="section section--cream" aria-label="Services">
     <div class="container">
-      <img src="/assets/decor/swirls.jpg" alt="" class="section-ornament" loading="lazy" width="390" height="100" />
       <div class="section-heading">
         <span class="section-line"></span>
         <h2>Our Services</h2>
@@ -60,39 +56,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="service-card">
           <div class="service-icon">
             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 10v4"/><path d="M14 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
+              <path d="M14 10v4"/>
+              <path d="M14 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
               <line x1="14" y1="30" x2="14" y2="46"/>
-              <path d="M28 8v4"/><path d="M28 12c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
+              <path d="M28 8v4"/>
+              <path d="M28 12c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
               <line x1="28" y1="28" x2="28" y2="46"/>
-              <path d="M42 10v4"/><path d="M42 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
+              <path d="M42 10v4"/>
+              <path d="M42 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
               <line x1="42" y1="30" x2="42" y2="46"/>
             </svg>
           </div>
-          <h3>Custom Experiences</h3>
-          <p>Curated sensory moments — live music, fragrance stations, and interactive displays that make guests feel special.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M28 42s-12-8-12-17c0-5 3.5-8.5 8.5-8.5 2 0 3 .7 3.5 2 .5-1.3 1.5-2 3.5-2 5 0 8.5 3.5 8.5 8.5 0 9-12 17-12 17z"/>
-              <path d="M12 34c-2.5 3.5-3.5 8-2.5 12"/>
-              <path d="M44 34c2.5 3.5 3.5 8 2.5 12"/>
-            </svg>
-          </div>
-          <h3>Personalised Touch</h3>
-          <p>Custom stationery, keepsakes, monogrammed details, and bespoke elements that make your event unmistakably yours.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M28 6v8M28 42v8M6 28h8M42 28h8M13 13l5.5 5.5M37.5 37.5L43 43M13 43l5.5-5.5M37.5 18.5L43 13"/>
-              <path d="M28 18l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
-            </svg>
-          </div>
-          <h3>Magical Memories</h3>
-          <p>Photo booths, guest books, video installations, and curated keepsakes that preserve your celebration for years to come.</p>
+          <h3>Experiences</h3>
+          <p>Curated sensory experiences and interactive moments that transform your event into a story worth telling.</p>
         </div>
       </div>
 
@@ -105,7 +81,6 @@ import MainLayout from '../layouts/MainLayout.astro';
   <!-- Founders -->
   <section class="section section--rose" aria-label="Founders">
     <div class="container text-center">
-      <img src="/assets/decor/floral-cluster.jpg" alt="" class="section-ornament" loading="lazy" width="390" height="170" />
       <div class="section-heading">
         <span class="section-line"></span>
         <h2>By the Founders</h2>
@@ -133,7 +108,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Portfolio Strip -->
   <section class="section section--cream" aria-label="Portfolio">
     <div class="container">
       <div class="section-heading">
@@ -160,54 +135,53 @@ import MainLayout from '../layouts/MainLayout.astro';
   /* Hero */
   .hero {
     position: relative;
+    min-height: 85vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px 24px 40px;
-    background: var(--bg-primary);
+    overflow: hidden;
+    padding-top: 80px;
   }
 
-  .hero-banner {
+  .hero-bg {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 20px 60px rgba(28, 59, 50, 0.1);
+    height: 100%;
+    object-fit: cover;
   }
 
-  .hero-cta {
-    margin-top: 40px;
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(251, 248, 243, 0.4) 0%, rgba(28, 59, 50, 0.6) 100%);
   }
 
-  /* Sub-banner strip */
-  .sub-banner-strip {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    padding: 24px 20px;
-    background: var(--bg-primary);
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    max-width: 48rem;
   }
 
-  .sub-banner-strip img {
-    height: 80px;
-    width: auto;
-    border-radius: 4px;
-    opacity: 0.9;
+  .hero-content h1 {
+    color: var(--white);
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
 
   @media (max-width: 768px) {
-    .sub-banner-strip { flex-direction: column; align-items: center; }
-    .sub-banner-strip img { width: 90%; height: auto; }
+    .hero-content h1 { font-size: 36px; }
   }
 
-  /* Section ornaments */
-  .section-ornament {
-    display: block;
-    margin: 0 auto 32px;
-    max-width: 300px;
-    height: auto;
-    opacity: 0.7;
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--accent-gold);
+    margin-bottom: 32px;
+    text-transform: uppercase;
   }
 
   /* Services grid */
@@ -217,11 +191,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     gap: 32px;
   }
 
-  @media (max-width: 900px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .services-grid { grid-template-columns: 1fr; }
   }
 
@@ -283,7 +253,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     .founder-quote { padding: 24px 24px; font-size: 17px; }
   }
 
-  /* Gallery */
+  /* Gallery grid */
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

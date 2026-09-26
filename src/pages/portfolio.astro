@@ -43,8 +43,8 @@ const photos = [
       <div class="gallery-grid reveal-stagger" id="gallery-grid">
         {photos.map((photo) => (
           <div class="gallery-item" data-category={photo.category}>
-            <button class="gallery-open" type="button" aria-label={`View larger: ${photo.alt}`} data-full={photo.src} data-caption={photo.alt}>
-              <img src={photo.src} alt={photo.alt} loading="lazy" width="400" height="400" />
+            <button class="gallery-open" type="button" aria-label={`View larger: ${photo.alt}`} data-full={`${photo.src}?v=2`} data-caption={photo.alt}>
+              <img src={`${photo.src}?v=2`} alt={photo.alt} loading="lazy" width="400" height="400" />
             </button>
           </div>
         ))}

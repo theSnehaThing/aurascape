@@ -1,16 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <!-- Arch frame -->
-  <path d="M20 100 C20 50, 60 20, 100 50" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
-  <!-- A letter -->
-  <path d="M35 95 L50 40 L65 95" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="42" y1="75" x2="58" y2="75" stroke="#C9A96E" stroke-width="2"/>
-  <!-- S letter -->
-  <path d="M75 55 C75 50, 82 45, 88 50 C94 55, 88 62, 82 65 C76 68, 72 75, 78 80 C84 85, 90 80, 92 75" fill="none" stroke="#1B4D4A" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Small flower accent -->
-  <circle cx="70" cy="35" r="3" fill="#E8C4C8"/>
-  <circle cx="76" cy="32" r="2.5" fill="#D4727E"/>
-  <circle cx="64" cy="32" r="2.5" fill="#E8C4C8"/>
-  <!-- Sparkle -->
-  <line x1="55" y1="85" x2="55" y2="92" stroke="#C9A96E" stroke-width="1.5"/>
-  <line x1="51.5" y1="88.5" x2="58.5" y2="88.5" stroke="#C9A96E" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100">
+  <!-- Large script S -->
+  <text x="45" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="400" fill="#1B4D4A" font-style="italic">S</text>
+  <!-- Smaller A overlapping -->
+  <text x="18" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="400" fill="#C9A96E">A</text>
+  
+  <!-- Brand text -->
+  <text x="70" y="78" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#1B4D4A" text-anchor="middle">AURA</text>
+  <text x="70" y="88" font-family="Georgia, 'Times New Roman', serif" font-size="7" letter-spacing="2" fill="#1B4D4A" text-anchor="middle">AND</text>
+  <text x="70" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#1B4D4A" text-anchor="middle">SCAPE</text>
+  
+  <!-- Floral accent - top left -->
+  <circle cx="30" cy="18" r="3" fill="#E8788A"/>
+  <circle cx="35" cy="14" r="2.5" fill="#F2A0B0"/>
+  <circle cx="26" cy="14" r="2" fill="#E8788A"/>
+  <path d="M28 22 Q26 28, 22 30" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
+  <path d="M32 20 Q34 26, 38 28" fill="none" stroke="#5A8C6A" stroke-width="1" stroke-linecap="round"/>
+  <ellipse cx="22" cy="30" rx="2" ry="3" fill="#5A8C6A" transform="rotate(-30 22 30)"/>
+  <ellipse cx="38" cy="28" rx="2" ry="3" fill="#5A8C6A" transform="rotate(20 38 28)"/>
+  
+  <!-- Small leaf accents -->
+  <ellipse cx="55" cy="12" rx="1.5" ry="3" fill="#7BA888" transform="rotate(15 55 12)"/>
+  <ellipse cx="60" cy="10" rx="1.5" ry="2.5" fill="#5A8C6A" transform="rotate(-10 60 10)"/>
 </svg>

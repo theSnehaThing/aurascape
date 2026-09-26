@@ -38,7 +38,7 @@
   --sp-2xl: 80px;
 
   /* Section */
-  --section-pad: 80px 48px;
+  --section-pad: 90px 48px;
   --section-pad-mobile: 40px 20px;
 }
 
@@ -290,7 +290,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   background: rgba(251, 248, 243, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -594,6 +594,92 @@ header, main, footer {
 .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.4s; }
 .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.5s; }
 .reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+/* --- Image Hover Micro-interaction --- */
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 120px 120px 0 0;
+}
+
+.image-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* --- Floating WhatsApp Button --- */
+.floating-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--text-main);
+  border: 2px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(28, 59, 50, 0.3);
+  transition: all 0.3s ease;
+}
+
+.floating-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(28, 59, 50, 0.4);
+}
+
+.floating-wa svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--accent-gold);
+}
+
+/* --- Testimonials --- */
+.testimonial-section {
+  background: var(--bg-secondary);
+}
+
+.testimonial-card {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  border: 1px solid var(--border-rose);
+}
+
+.testimonial-stars {
+  color: var(--accent-gold);
+  font-size: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.testimonial-date {
+  font-size: 12px;
+  color: var(--accent-rose);
+  margin-top: 4px;
+}
 
 /* --- Utility --- */
 .divider {

@@ -219,16 +219,15 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   .founder-photo {
     width: 240px;
-    height: 240px;
-    border-radius: 50%;
+    height: 300px;
+    border-radius: 120px 120px 0 0;
     object-fit: cover;
     border: 3px solid var(--accent-gold);
-    padding: 6px;
     margin-bottom: 16px;
   }
 
   @media (max-width: 768px) {
-    .founder-photo { width: 180px; height: 180px; }
+    .founder-photo { width: 180px; height: 220px; border-radius: 90px 90px 0 0; }
   }
 
   .founder h3 {
@@ -262,9 +261,9 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   .gallery-grid img {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4/5;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 120px 120px 0 0;
   }
 
   @media (max-width: 768px) {

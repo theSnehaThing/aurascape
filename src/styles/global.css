@@ -412,6 +412,17 @@ p {
   color: var(--text-main);
 }
 
+.mobile-menu .btn {
+  background: var(--accent-gold);
+  color: var(--white);
+  border: 1px solid var(--accent-gold);
+}
+
+.mobile-menu .btn:hover {
+  background: var(--text-main);
+  border-color: var(--text-main);
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--text-main);

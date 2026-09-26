@@ -1,18 +1,45 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// Reusable floral ornament SVG (top-left corner)
+const OrnamentTL = `
+  <svg class="ornament ornament-top-left" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Arch -->
+    <path d="M10 190 C10 80, 60 20, 150 10" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Hanging lanterns -->
+    <line x1="60" y1="55" x2="60" y2="75" stroke="#C9A96E" stroke-width="1"/>
+    <ellipse cx="60" cy="80" rx="6" ry="8" fill="#C9A96E" opacity="0.3"/>
+    <line x1="90" y1="38" x2="90" y2="60" stroke="#C9A96E" stroke-width="1"/>
+    <ellipse cx="90" cy="65" rx="5" ry="7" fill="#C9A96E" opacity="0.3"/>
+    <line x1="120" y1="25" x2="120" y2="48" stroke="#C9A96E" stroke-width="1"/>
+    <ellipse cx="120" cy="53" rx="5" ry="7" fill="#C9A96E" opacity="0.3"/>
+    <!-- Flowers -->
+    <circle cx="145" cy="18" r="8" fill="#E8C4C8" opacity="0.6"/>
+    <circle cx="155" cy="12" r="6" fill="#D4727E" opacity="0.5"/>
+    <circle cx="138" cy="10" r="5" fill="#E8C4C8" opacity="0.5"/>
+    <circle cx="150" cy="25" r="4" fill="#D4727E" opacity="0.4"/>
+    <!-- Leaves -->
+    <path d="M140 30 C145 25, 150 28, 148 35" stroke="#2D6B67" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M130 20 C135 15, 140 18, 138 25" stroke="#2D6B67" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- Small buds -->
+    <circle cx="160" cy="20" r="3" fill="#C9A96E" opacity="0.4"/>
+    <circle cx="135" cy="15" r="2" fill="#C9A96E" opacity="0.3"/>
+  </svg>
+`;
 ---
 
 <MainLayout
   title="Aura & Scape — Luxury Event Planning & Decoration | Where Memories Become Magic"
   description="Aura & Scape is a luxury event planning and decoration company by Antima & Shilpa. We bring your vision to life with stunning decor, beautiful events, and unique experiences."
 >
-  <!-- Hero -->
-  <section class="hero" aria-label="Hero">
+  <!-- Hero with parallax + ornaments -->
+  <section class="hero section--decorated" aria-label="Hero">
+    {OrnamentTL}
     <img src="/assets/hero/hero-bg.jpg" alt="" class="hero-bg" loading="eager" width="1920" height="1080" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-script">Something magical is coming</p>
-      <h1>Aura <span style="color: var(--gold); font-weight: 300;">&</span> Scape</h1>
+      <h1>Aura <span class="amp">&</span> Scape</h1>
       <p class="hero-tagline">Events &nbsp;·&nbsp; Decor &nbsp;·&nbsp; Experiences</p>
       <div class="divider"></div>
       <p class="hero-quote">"Where Memories Become Magic"</p>
@@ -22,16 +49,17 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- Services -->
-  <section class="section bg-cream" aria-label="Our services">
+  <section class="section section--cream section--decorated" aria-label="Our services">
+    {OrnamentTL}
     <div class="container">
-      <div class="text-center">
+      <div class="text-center reveal">
         <h2>What We Do</h2>
         <div class="divider"></div>
-        <p class="text-forest-light max-w-lg mx-auto">Every celebration deserves to be extraordinary. Here's how we make it happen.</p>
+        <p class="section-intro">Every celebration deserves to be extraordinary. Here's how we make it happen.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="service">
+      <div class="services-grid reveal-stagger">
+        <div class="service service-card card-hover">
           <div class="service-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m6.364-14.364l-12.728 12.728M21 12H3" /></svg>
           </div>
@@ -39,7 +67,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <p>From florals to fairy lights, we craft spaces that take your breath away. Every detail curated, every corner considered.</p>
         </div>
 
-        <div class="service">
+        <div class="service service-card card-hover">
           <div class="service-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><line x1="12" y1="3" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="21" /><line x1="3" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="21" y2="12" /></svg>
           </div>
@@ -47,7 +75,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <p>Weddings, corporate gatherings, intimate celebrations — we plan seamless experiences from concept to the final sparkle.</p>
         </div>
 
-        <div class="service">
+        <div class="service service-card card-hover">
           <div class="service-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.714-1.607-2.376-2.733-4.312-2.733C5.099 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
           </div>
@@ -59,35 +87,36 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- Gallery Strip -->
-  <section class="section bg-ivory" aria-label="Featured work">
+  <section class="section section--ivory" aria-label="Featured work">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center reveal">
         <h2>A Glimpse</h2>
         <div class="divider"></div>
       </div>
 
-      <div class="gallery-strip">
+      <div class="gallery-strip reveal-stagger">
         <img src="/assets/gallery/preview-1.jpg" alt="Elegant floral wedding decoration" loading="lazy" width="400" height="400" />
         <img src="/assets/gallery/preview-2.jpg" alt="Luxurious event backdrop with golden arches" loading="lazy" width="400" height="400" />
         <img src="/assets/gallery/preview-3.jpg" alt="Romantic candlelit dinner setup" loading="lazy" width="400" height="400" />
         <img src="/assets/gallery/preview-4.jpg" alt="Pastel flower arrangements for celebration" loading="lazy" width="400" height="400" />
       </div>
 
-      <div class="text-center" style="margin-top: 2rem;">
+      <div class="text-center">
         <a href="/gallery" class="link-gold">View Full Gallery →</a>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="section bg-cream" aria-label="What clients say">
+  <section class="section section--cream section--decorated" aria-label="What clients say">
+    {OrnamentTL}
     <div class="container">
-      <div class="text-center">
+      <div class="text-center reveal">
         <h2>Kind Words</h2>
         <div class="divider"></div>
       </div>
 
-      <div class="testimonials-grid">
+      <div class="testimonials-grid reveal-stagger">
         <div class="testimonial">
           <blockquote>"The mandap looked like something from a dream. Every single detail was perfect."</blockquote>
           <footer>— Priya & Ramesh, Wedding</footer>
@@ -105,10 +134,10 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- CTA -->
-  <section class="section bg-blush" aria-label="Call to action">
-    <div class="container text-center">
+  <section class="section section--blush" aria-label="Call to action">
+    <div class="container text-center reveal">
       <h2>Ready to Create Something Beautiful?</h2>
-      <p class="text-forest-light max-w-lg mx-auto" style="margin: 1rem auto 2rem;">Tell us about your vision. We'll make it real.</p>
+      <p class="section-intro">Tell us about your vision. We'll make it real.</p>
       <a href="/contact" class="btn">Start Planning</a>
     </div>
   </section>

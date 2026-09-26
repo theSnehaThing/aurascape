@@ -1133,6 +1133,193 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
   background-color: var(--teal-mid);
 }
 
+/* --- Animations & Transitions --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Scroll-triggered reveal (added via JS) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.4s; }
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(27, 77, 74, 0.08);
+}
+
+/* --- Decorative Floral Elements --- */
+.ornament {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.ornament-top-left {
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+}
+
+.ornament-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .ornament {
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+  }
+}
+
+/* Floating petals container */
+.petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -5%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% 0 50% 50%;
+  opacity: 0;
+  animation: petalFall 8s linear infinite;
+}
+
+.petal:nth-child(1) { left: 10%; animation-delay: 0s; background: var(--blush-deep); }
+.petal:nth-child(2) { left: 25%; animation-delay: 2s; background: var(--gold-light); width: 8px; height: 8px; }
+.petal:nth-child(3) { left: 45%; animation-delay: 4s; background: var(--blush-deep); width: 10px; height: 10px; }
+.petal:nth-child(4) { left: 65%; animation-delay: 1s; background: var(--gold); }
+.petal:nth-child(5) { left: 80%; animation-delay: 3s; background: var(--blush-deep); width: 9px; height: 9px; }
+.petal:nth-child(6) { left: 90%; animation-delay: 5s; background: var(--gold-light); width: 7px; height: 7px; }
+
+/* Service card with border */
+.service-card {
+  padding: var(--sp-md);
+  border: 1px solid rgba(232, 213, 176, 0.3);
+  border-radius: 2px;
+  background: var(--cream);
+}
+
+/* Section with relative positioning for ornaments */
+.section--decorated {
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Footer fixes --- */
+.footer-inner {
+  padding: var(--sp-xl) var(--sp-md) var(--sp-md);
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    padding: var(--sp-xl) 0 var(--sp-md);
+  }
+}
+
+/* Ensure consistent font in footer */
+.footer li {
+  font-family: var(--font-sans);
+}
+
 /* --- Privacy / Prose --- */
 .prose {
   max-width: 44rem;

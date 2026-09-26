@@ -24,7 +24,7 @@
 
 | Task | Where | Time |
 |------|-------|------|
-| Replace placeholder SVGs with real photos | `public/assets/gallery/` + `public/assets/hero/` | 30 min |
+| Replace placeholder photos with real event photos | `public/assets/gallery/` (16 on-theme CC placeholders, credits in IMG_CREDITS.md) + `public/assets/hero/` | 30 min |
 | Sign up at formspree.io, paste form ID | `src/pages/contact.astro` (search `YOUR_FORM_ID`) | 5 min |
 | Add real phone number | `src/components/Footer.astro` + `src/pages/contact.astro` | 2 min |
 | Add real email if not using hello@aurascape.in | Same files | 1 min |

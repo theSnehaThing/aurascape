@@ -59,14 +59,17 @@ body {
   font-size: 16px;
 }
 
-/* Background layer */
+/* Background layer - watercolor paper texture */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 0;
   background-image:
-    url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5' opacity='0.04'%3E%3Cpath d='M100 300c0-50 30-80 60-80s60 30 60 80-30 80-60 80-60-30-60-80z'/%3E%3Cpath d='M400 150c0-40 25-65 50-65s50 25 50 65-25 65-50 65-50-25-50-65z'/%3E%3Cpath d='M250 450c0-35 20-55 40-55s40 20 40 55-20 55-40 55-40-20-40-55z'/%3E%3C/g%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 15% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(217, 162, 168, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(28, 59, 50, 0.02) 0%, transparent 60%);
   background-color: var(--bg-primary);
   pointer-events: none;
 }
@@ -139,8 +142,9 @@ p {
 .section-line {
   flex: 1;
   max-width: 120px;
-  height: 1px;
-  background: var(--accent-gold);
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg width='120' height='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6 Q20 2, 40 6 Q60 10, 80 5 Q100 1, 118 6' fill='none' stroke='%23D4AF37' stroke-width='1.2' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
 }
 
 /* --- Buttons --- */
@@ -208,19 +212,37 @@ p {
   transform: translateY(-2px);
 }
 
-/* --- Cards --- */
+/* --- Cards (watercolor feel) --- */
 .service-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-rose);
   border-radius: 12px;
   padding: 40px 28px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  box-shadow: 
+    0 4px 16px rgba(217, 162, 168, 0.08),
+    0 1px 4px rgba(28, 59, 50, 0.03),
+    inset 0 0 0 1px rgba(251, 248, 243, 0.5);
+  position: relative;
   transition: all 0.3s ease;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 24px;
+  right: 24px;
+  height: 8px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 
+    0 12px 32px rgba(217, 162, 168, 0.12),
+    0 4px 12px rgba(28, 59, 50, 0.05),
+    inset 0 0 0 1px rgba(251, 248, 243, 0.5);
 }
 
 .service-card h3 {

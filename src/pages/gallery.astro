@@ -1,8 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-// Gallery images - add your own to /public/assets/gallery/
-// Format: src, alt, category
 const galleryItems = [
   { src: '/assets/gallery/1.jpg.svg', alt: 'Elegant wedding mandap with floral arches and golden drapes', category: 'wedding' },
   { src: '/assets/gallery/2.jpg.svg', alt: 'Corporate event stage with pastel florals and ambient lighting', category: 'corporate' },
@@ -30,64 +28,46 @@ const categories = [
   title="Gallery — Aura & Scape | Our Event Decorations & Designs"
   description="Browse our gallery of stunning event decorations. Weddings, corporate events, and private celebrations — each one unique, each one unforgettable."
 >
-  <!-- Hero -->
-  <section class="pt-24 md:pt-32 pb-8 bg-cream" aria-label="Gallery header">
-    <div class="container-site text-center">
-      <p class="font-script text-gold text-2xl md:text-3xl mb-3">Our Work</p>
-      <h1 class="font-serif text-4xl md:text-5xl text-teal-deep mb-4">Gallery</h1>
-      <div class="divider-gold" />
-      <p class="text-forest/70 max-w-md mx-auto">
-        A collection of moments we've had the honour of bringing to life.
-      </p>
+  <section class="page-hero bg-cream" aria-label="Gallery header">
+    <div class="container">
+      <span class="font-script">Our Work</span>
+      <h1>Gallery</h1>
+      <div class="divider"></div>
+      <p>A collection of moments we've had the honour of bringing to life.</p>
     </div>
   </section>
 
   <!-- Filters -->
-  <section class="py-8 bg-cream" aria-label="Gallery filters">
-    <div class="container-site">
-      <div class="flex justify-center gap-2 md:gap-4 flex-wrap" id="filter-bar" role="tablist" aria-label="Gallery category filters">
-        {categories.map((cat, i) => (
-          <button
-            role="tab"
-            aria-selected={i === 0}
-            data-filter={cat.key}
-            class={`px-4 py-2 text-sm tracking-wide rounded-sm transition-colors duration-200 ${
-              i === 0
-                ? 'bg-teal-deep text-cream'
-                : 'text-forest/70 hover:text-teal-deep border border-gold-light/50'
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
-      </div>
+  <div class="container">
+    <div class="filter-bar" id="filter-bar" role="tablist" aria-label="Gallery filters">
+      {categories.map((cat, i) => (
+        <button
+          role="tab"
+          aria-selected={i === 0 ? 'true' : 'false'}
+          data-filter={cat.key}
+          class={`filter-btn ${i === 0 ? 'active' : ''}`}
+        >
+          {cat.label}
+        </button>
+      ))}
     </div>
-  </section>
+  </div>
 
   <!-- Gallery Grid -->
-  <section class="section bg-ivory pb-16" aria-label="Gallery images">
-    <div class="container-site">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" id="gallery-grid">
+  <section class="section bg-ivory" style="padding-top: 0;" aria-label="Gallery images">
+    <div class="container">
+      <div class="gallery-grid" id="gallery-grid">
         {galleryItems.map((item) => (
           <figure
-            class="gallery-item relative group overflow-hidden rounded-sm"
+            class="gallery-item"
             data-category={item.category}
             tabindex="0"
             role="button"
             aria-label={`View: ${item.alt}`}
           >
-            <img
-              src={item.src}
-              alt={item.alt}
-              class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <figcaption class="absolute inset-0 bg-teal-deep/0 group-hover:bg-teal-deep/60 transition-colors duration-300 flex items-end p-4">
-              <span class="text-cream font-serif text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {item.alt}
-              </span>
+            <img src={item.src} alt={item.alt} loading="lazy" width="600" height="400" />
+            <figcaption>
+              <span>{item.alt}</span>
             </figcaption>
           </figure>
         ))}
@@ -96,57 +76,37 @@ const categories = [
   </section>
 
   <!-- Lightbox -->
-  <div
-    id="lightbox"
-    class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4"
-    role="dialog"
-    aria-label="Image lightbox"
-    aria-hidden="true"
-  >
-    <button
-      class="absolute top-4 right-4 text-cream text-3xl font-light hover:text-gold transition-colors z-10"
-      id="lightbox-close"
-      aria-label="Close lightbox"
-    >
-      &times;
-    </button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm" />
-    <p id="lightbox-caption" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream/90 text-sm text-center max-w-lg px-4"></p>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
   </div>
 
   <!-- CTA -->
   <section class="section bg-blush" aria-label="Contact CTA">
-    <div class="container-site text-center">
-      <h2 class="font-serif text-2xl md:text-3xl text-teal-deep mb-3">Want Something Like This?</h2>
-      <p class="text-forest/70 mb-6">Every event we do is unique to the people celebrating it.</p>
-      <a href="/contact" class="inline-block px-8 py-3 bg-teal-deep text-cream font-medium tracking-wide rounded-sm hover:bg-teal-mid transition-colors duration-200">
-        Tell Us Your Vision
-      </a>
+    <div class="container text-center">
+      <h2>Want Something Like This?</h2>
+      <p class="text-forest-light" style="margin: 0.75rem 0 1.5rem;">Every event we do is unique to the people celebrating it.</p>
+      <a href="/contact" class="btn">Tell Us Your Vision</a>
     </div>
   </section>
 </MainLayout>
 
 <script>
-  // Filter
   const filterBar = document.getElementById('filter-bar');
-  const grid = document.getElementById('gallery-grid');
   const items = document.querySelectorAll('.gallery-item');
 
   filterBar?.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('button[data-filter]');
     if (!btn) return;
 
-    // Update active state
     filterBar.querySelectorAll('button').forEach(b => {
-      b.classList.remove('bg-teal-deep', 'text-cream');
-      b.classList.add('text-forest/70', 'border', 'border-gold-light/50');
-      (b as HTMLElement).setAttribute('aria-selected', 'false');
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
     });
-    btn.classList.add('bg-teal-deep', 'text-cream');
-    btn.classList.remove('text-forest/70', 'border', 'border-gold-light/50');
+    btn.classList.add('active');
     btn.setAttribute('aria-selected', 'true');
 
-    // Filter
     const filter = btn.dataset.filter;
     items.forEach(item => {
       const cat = (item as HTMLElement).dataset.category;
@@ -164,15 +124,13 @@ const categories = [
     lightboxImg.src = src;
     lightboxImg.alt = alt;
     lightboxCaption.textContent = alt;
-    lightbox.classList.remove('hidden');
-    lightbox.classList.add('flex');
+    lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     lightboxClose?.focus();
   }
 
   function closeLightbox() {
-    lightbox?.classList.add('hidden');
-    lightbox?.classList.remove('flex');
+    lightbox?.classList.remove('open');
     lightbox?.setAttribute('aria-hidden', 'true');
   }
 
@@ -195,25 +153,3 @@ const categories = [
     if (e.key === 'Escape') closeLightbox();
   });
 </script>
-
-<style>
-  .bg-cream { background-color: #FFFDF5; }
-  .bg-ivory { background-color: #FDF8F0; }
-  .bg-blush { background-color: #F5E6E8; }
-  .bg-teal-deep { background-color: #1B4D4A; }
-  .text-teal-deep { color: #1B4D4A; }
-  .text-gold { color: #C9A96E; }
-  .text-forest { color: #2C3E3E; }
-  .text-forest\/70 { color: rgba(44, 62, 62, 0.7); }
-  .text-cream { color: #FFFDF5; }
-  .text-cream\/90 { color: rgba(255, 253, 245, 0.9); }
-  .border-gold-light\/50 { border-color: rgba(232, 213, 176, 0.5); }
-  .hover\:bg-teal-mid:hover { background-color: #2D6B67; }
-  .hover\:text-gold:hover { color: #C9A96E; }
-  .font-serif { font-family: "Cormorant Garamond", Georgia, serif; }
-  .font-script { font-family: "Great Vibes", cursive; }
-  .divider-gold { width: 80px; height: 2px; background: linear-gradient(to right, transparent, #C9A96E, transparent); margin: 1.5rem auto; }
-  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-  .section { padding: 5rem 0; }
-  @media (max-width: 768px) { .section { padding: 3rem 0; } }
-</style>

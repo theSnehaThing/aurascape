@@ -13,7 +13,7 @@ interface Props {
 const {
   title,
   description = 'Aura & Scape — Luxury event planning and decoration. Where memories become magic.',
-  image = '/assets/hero/og-image.jpg'
+  image = '/assets/hero/og-image.svg'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -26,41 +26,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- Primary Meta Tags -->
   <title>{title}</title>
-  <meta name="title" content={title} />
   <meta name="description" content={description} />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.site)} />
 
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={canonicalURL} />
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.site)} />
 
-  <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Aura & Scape",
       "description": "Luxury event planning and decoration company. Events, Decor, Experiences by Antima & Shilpa.",
-      "url": "https://aurascape.in",
-      "image": "https://aurascape.in/assets/hero/og-image.jpg",
+      "url": "https://bugaboxes.com",
       "telephone": "+91-XXXXX-XXXXX",
       "email": "hello@aurascape.in",
       "address": {
@@ -68,19 +57,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
         "addressCountry": "IN"
-      },
-      "founder": [
-        { "@type": "Person", "name": "Antima" },
-        { "@type": "Person", "name": "Shilpa" }
-      ],
-      "priceRange": "$$",
-      "openingHours": "Mo-Sa 09:00-18:00"
+      }
     }
   </script>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
   <Header />
-  <main class="flex-1">
+  <main>
     <slot />
   </main>
   <Footer />

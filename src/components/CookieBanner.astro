@@ -1,35 +1,17 @@
----
-// Cookie consent banner - GDPR compliant
-// Only loads analytics/tracking after user consents
-// Stores preference in localStorage
----
-
 <div
+  class="cookie-banner"
   id="cookie-banner"
-  class="fixed bottom-0 left-0 right-0 z-50 bg-ivory border-t border-gold-light/50 shadow-lg"
   role="dialog"
   aria-label="Cookie consent"
-  hidden
 >
-  <div class="container-site py-4 md:py-5 flex flex-col md:flex-row items-center gap-3 md:gap-6">
-    <p class="text-sm text-forest flex-1 text-center md:text-left">
-      We use cookies to enhance your browsing experience and analyse our traffic.
-      We'll only store cookies if you accept. Read our
-      <a href="/privacy" class="text-teal underline hover:text-gold transition-colors">Privacy Policy</a>.
+  <div class="cookie-inner">
+    <p class="cookie-text">
+      We use a single cookie to remember your consent preference. No tracking, no analytics.
+      Read our <a href="/privacy">Privacy Policy</a>.
     </p>
-    <div class="flex gap-3 shrink-0">
-      <button
-        id="cookie-reject"
-        class="px-4 py-2 text-sm font-medium border border-teal-deep text-teal-deep rounded-sm hover:bg-teal-deep hover:text-cream transition-colors"
-      >
-        Decline
-      </button>
-      <button
-        id="cookie-accept"
-        class="px-4 py-2 text-sm font-medium bg-teal-deep text-cream rounded-sm hover:bg-teal-mid transition-colors"
-      >
-        Accept
-      </button>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-reject" id="cookie-reject">Decline</button>
+      <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept</button>
     </div>
   </div>
 </div>
@@ -41,21 +23,18 @@
     const banner = document.getElementById('cookie-banner');
     if (!banner) return;
 
-    const stored = localStorage.getItem(CONSENT_KEY);
-    if (!stored) {
-      banner.removeAttribute('hidden');
+    if (!localStorage.getItem(CONSENT_KEY)) {
+      banner.classList.add('visible');
     }
 
     document.getElementById('cookie-accept')?.addEventListener('click', () => {
       localStorage.setItem(CONSENT_KEY, 'accepted');
-      banner.setAttribute('hidden', '');
-      // Load analytics here if needed
-      // e.g., initializePlausible();
+      banner.classList.remove('visible');
     });
 
     document.getElementById('cookie-reject')?.addEventListener('click', () => {
       localStorage.setItem(CONSENT_KEY, 'rejected');
-      banner.setAttribute('hidden', '');
+      banner.classList.remove('visible');
     });
   }
 
@@ -65,19 +44,3 @@
     init();
   }
 </script>
-
-<style>
-  .bg-ivory { background-color: #FDF8F0; }
-  .border-gold-light\/50 { border-color: rgba(232, 213, 176, 0.5); }
-  .text-forest { color: #2C3E3E; }
-  .text-teal { color: #1B4D4A; }
-  .hover\:text-gold:hover { color: #C9A96E; }
-  .border-teal-deep { border-color: #1B4D4A; }
-  .text-teal-deep { color: #1B4D4A; }
-  .hover\:bg-teal-deep:hover { background-color: #1B4D4A; }
-  .hover\:text-cream:hover { color: #FFFDF5; }
-  .bg-teal-deep { background-color: #1B4D4A; }
-  .text-cream { color: #FFFDF5; }
-  .hover\:bg-teal-mid:hover { background-color: #2D6B67; }
-  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-</style>

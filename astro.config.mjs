@@ -1,16 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://aurascape.in',
-  integrations: [sitemap(), tailwindcss()],
-  vite: {
-    css: {
-      postcss: {
-        plugins: [],
-      },
-    },
-  },
+  site: 'https://bugaboxes.com',
+  integrations: [sitemap()],
 });

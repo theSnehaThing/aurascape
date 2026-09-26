@@ -1,23 +1,23 @@
 # Placeholder Image Credits
 
-Gallery + home-preview images are CC-licensed placeholders (sourced via Openverse: Flickr / Wikimedia Commons).
+Gallery + home-preview images are CC-licensed placeholders (sourced via Openverse: Flickr / Wikimedia Commons), soft-graded for a consistent pastel finish.
 Replace with real client photos and delete this file.
 
-| File | Title | Creator | License | Source |
-|---|---|---|---|---|
 | 1.jpg | Wedding Arch Flowers | Derek N Winterburn | by-nd | https://www.flickr.com/photos/89254734@N00/19971856726 |
-| 2.jpg | Wedding table setting | andrewmalone | by | https://www.flickr.com/photos/41894170049@N01/5162694401 |
-| 3.jpg | Candlelight Dinner | sprocket003 | by-nc-sa | https://www.flickr.com/photos/49003667@N00/63402599 |
-| 4.jpg | Spokane Washington ~ Hall of Dodges ~ Ballroom Chandelier | Onasill ~ Bill - Bill - 80.5M Views - Thank You | by-nc-sa | https://www.flickr.com/photos/7156765@N05/23750566203 |
-| 5.jpg | Wedding Bouquet | jerryfergusonphotography | by | https://www.flickr.com/photos/17445097@N03/8633321435 |
-| 6.jpg | Pink Rose Macro | Bold Frontiers | by | https://www.flickr.com/photos/82955120@N05/8690324463 |
-| 7.jpg | Decorations of seed pod flowers strung from the st | Wonderlane | cc0 | https://www.flickr.com/photos/71401718@N00/2135032686 |
-| 8.jpg | “Mixed Media Sculpture by Petah Coyne: Untitled #1 | See-ming Lee (SML) | by-nc | https://www.flickr.com/photos/48973657@N00/8814624127 |
-| 9.jpg | Rose, Candlelight, バラ, キャンドルライト, | T.Kiya | by-sa | https://www.flickr.com/photos/38217580@N05/9425296311 |
-| 10.jpg | Crystal Chandelier (White House) | catface3 | by-nc-sa | https://www.flickr.com/photos/11593804@N06/2088722158 |
-| 11.jpg | Wedding Cake Table 04.16.11 | Sk8ngDad | by-nc-sa | https://www.flickr.com/photos/90494751@N00/6053253303 |
-| 12.jpg | garden lantern | lapideo | by-nc-nd | https://www.flickr.com/photos/38462131@N00/2334741873 |
-| preview-1.jpg | Table Settings | richpompetti | by-nc-sa | https://www.flickr.com/photos/56731143@N00/426265140 |
-| preview-2.jpg | Disney Dream Chandelier | Photomatt28 | by-nc-nd | https://www.flickr.com/photos/46837385@N03/8476818081 |
-| preview-3.jpg | Candlelight Table | Onilad | by-nc-nd | https://www.flickr.com/photos/19874470@N00/2624538324 |
-| preview-4.jpg | Flower arrangements in hotel, Kuala Lumpur, Malaysia | Arthur Chapman | by | https://www.flickr.com/photos/32005048@N06/3660486379 |
+| 2.jpg | Table Setting | Tracy Hunter | by | https://www.flickr.com/photos/11121785@N00/133891501 |
+| 3.jpg | Waiting for dinner 3.jpg | docoverachiever | by | https://www.flickr.com/photos/90692748@N04/11491966986 |
+| 4.jpg | Chandelier | ellenm1 | by-nc | https://www.flickr.com/photos/47051377@N00/4279730915 |
+| 5.jpg | 059e soft baby pink | jjjj56cp | by-nc-sa | https://www.flickr.com/photos/25171569@N02/16186656317 |
+| 6.jpg | soft pink peony | Muffet | by | https://www.flickr.com/photos/53133240@N00/5577859240 |
+| 7.jpg | Mason Jar Fairy Lights | joncutrer | by | https://www.flickr.com/photos/47121680@N00/44084093015 |
+| 8.jpg | Formal Flower Arrangement | Flower Factor | by-nc | https://www.flickr.com/photos/60213850@N02/5526451995 |
+| 9.jpg | PEACH ROSES | Kaz Andrew | by-nd | https://www.flickr.com/photos/22907821@N02/2529328234 |
+| 10.jpg | Chandelier | ellenm1 | by-nc | https://www.flickr.com/photos/47051377@N00/4279730915 |
+| 11.jpg | Elegant Vintage Ivory Wedding Cake | Graceful Cake Creations | by-nc-nd | https://www.flickr.com/photos/30925581@N02/2896903986 |
+| 12.jpg | Japanese lanterns | letsgoeverywhere | by | https://www.flickr.com/photos/26263283@N00/283403402 |
+| File | Title | Creator | License | Source |
+| preview-1.jpg | Blushing Bride | Carosaurus | by-nc-sa | https://www.flickr.com/photos/71946868@N00/2429276639 |
+| preview-2.jpg | Fire Radiance | Carol (vanhookc) | by-sa | https://www.flickr.com/photos/97651299@N00/33907202808 |
+| preview-3.jpg | yellow daffodil in egg shell with pink and white pastel | ProFlowers.com | by | https://www.flickr.com/photos/127365614@N08/16805396928 |
+| preview-4.jpg | Pink and white flower bouquet | Marit & Toomas Hinnosaar | by | https://www.flickr.com/photos/27519540@N04/29345494068 || 11.jpg | Elegant Ivory Wedding Cake with Fondant Lace Applique | Graceful Cake Creations | by-nc-nd | https://www.flickr.com/photos/30925581@N02/5606948449 |
+|---|---|---|---|---|

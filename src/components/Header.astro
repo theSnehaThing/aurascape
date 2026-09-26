@@ -1,9 +1,10 @@
 ---
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'About' },
+  { href: '/#services', label: 'Services' },
+  { href: '/gallery', label: 'Portfolio' },
+  { href: '/contact', label: 'Enquire' },
 ];
 
 const { pathname } = Astro.url;
@@ -23,9 +24,7 @@ const { pathname } = Astro.url;
             <a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a>
           </li>
         ))}
-        <li>
-          <a href="/contact" class="btn">Plan Your Event</a>
-        </li>
+        <li><a href="/contact" class="btn">Enquire</a></li>
       </ul>
     </nav>
 
@@ -43,7 +42,7 @@ const { pathname } = Astro.url;
           <a href={link.href} class={pathname === link.href ? 'active' : ''}>{link.label}</a>
         </li>
       ))}
-      <li><a href="/contact" class="btn">Plan Your Event</a></li>
+      <li><a href="/contact" class="btn">Enquire</a></li>
     </ul>
   </div>
 </header>

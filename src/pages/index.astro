@@ -4,116 +4,148 @@ import Ornament from '../components/Ornament.astro';
 ---
 
 <MainLayout
-  title="Aura & Scape — Luxury Event Planning & Decoration | Where Memories Become Magic"
-  description="Aura & Scape is a luxury event planning and decoration company by Antima & Shilpa. We bring your vision to life with stunning decor, beautiful events, and unique experiences."
+  title="Aura & Scape - Events, Decor, Experiences"
+  description="Aura & Scape — Where creativity meets elegance. Events, Decor, Experiences by Antima & Shilpa. Edinburgh, Scotland."
 >
-  <!-- Hero -->
-  <section class="hero section--decorated" aria-label="Hero">
-    <Ornament />
-    <Ornament position="bottom-right" />
+  <!-- Hero — full photo background -->
+  <section class="hero" aria-label="Hero">
     <img src="/assets/hero/hero-bg.jpg" alt="" class="hero-bg" loading="eager" width="1920" height="1080" />
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <h1 class="hero-title">
-        Aura <span class="amp">&</span> Scape
-      </h1>
-
-      <p class="hero-tagline">Events &nbsp;✦&nbsp; Decor &nbsp;✦&nbsp; Experiences</p>
-
-      <p class="hero-byline">By Antima & Shilpa</p>
-
+      <p class="hero-subtitle">Something magical is coming!</p>
+      <h1 class="hero-launching">We're Launching</h1>
+      <p class="hero-desc">Where creativity meets elegance, and every celebration becomes an unforgettable experience.</p>
       <div class="hero-divider">
-        <span class="hero-divider-line"></span>
-        <span class="hero-divider-diamond">✦</span>
-        <span class="hero-divider-line"></span>
+        <span class="hero-line"></span>
+        <span class="hero-heart">♥</span>
+        <span class="hero-line"></span>
       </div>
-
-      <p class="hero-desc">
-        From dreamy backdrops to statement décor, we bring your vision to life,
-        one magical moment at a time. Where creativity meets elegance, and every
-        celebration becomes an unforgettable experience.
-      </p>
-
       <p class="hero-motto">Where Memories Become Magic</p>
+      <span class="hero-small-heart">♡</span>
+    </div>
+  </section>
 
-      <!-- 5 Feature icons — consistent SVG line style -->
-      <div class="hero-features" role="list" aria-label="Our specialities">
-        <div class="hero-feature" role="listitem">
-          <div class="hero-feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3c-1.5 2-4 3.5-4 6.5 0 2 1.5 3.5 4 3.5s4-1.5 4-3.5c0-3-2.5-4.5-4-6.5z"/>
-              <path d="M12 13v5"/>
-              <path d="M9 21h6"/>
-              <path d="M9 18h6"/>
-            </svg>
-          </div>
-          <span class="hero-feature-label">Stunning Decor</span>
-        </div>
-
-        <div class="hero-feature" role="listitem">
-          <div class="hero-feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9"/>
-              <circle cx="12" cy="12" r="4"/>
-              <line x1="12" y1="3" x2="12" y2="5"/>
-              <line x1="12" y1="19" x2="12" y2="21"/>
-              <line x1="3" y1="12" x2="5" y2="12"/>
-              <line x1="19" y1="12" x2="21" y2="12"/>
-            </svg>
-          </div>
-          <span class="hero-feature-label">Beautiful Events</span>
-        </div>
-
-        <div class="hero-feature" role="listitem">
-          <div class="hero-feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6z"/>
-            </svg>
-          </div>
-          <span class="hero-feature-label">Unique Experiences</span>
-        </div>
-
-        <div class="hero-feature" role="listitem">
-          <div class="hero-feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>
-            </svg>
-          </div>
-          <span class="hero-feature-label">Personalised Touch</span>
-        </div>
-
-        <div class="hero-feature" role="listitem">
-          <div class="hero-feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5L15 8m-6 8l-2.5 2.5m11 0L15 16M8 8L5.5 5.5"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </div>
-          <span class="hero-feature-label">Magical Memories</span>
-        </div>
+  <!-- Services -->
+  <section class="section section--cream" aria-label="Services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-line"></span>
+        <h2>Services</h2>
+        <span class="section-line"></span>
       </div>
 
-      <!-- CTA -->
-      <a href="/contact" class="hero-cta">
-        Let's make your next celebration extraordinary
-      </a>
+      <div class="services-row">
+        <div class="service-item">
+          <div class="service-icon">
+            <!-- Arch icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 42V18C8 10 14 4 24 4s16 6 16 14v24"/>
+              <path d="M14 42V20c0-5 3-9 10-9s10 4 10 9v22"/>
+              <line x1="6" y1="42" x2="42" y2="42"/>
+              <path d="M12 30c0-2 1.5-4 3-4s3 2 3 4"/>
+              <path d="M30 30c0-2 1.5-4 3-4s3 2 3 4"/>
+            </svg>
+          </div>
+          <h3>Events</h3>
+          <p>Where creativity meets elegance, and every celebration becomes.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <!-- Curtains icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="6" width="32" height="36" rx="1"/>
+              <path d="M8 6h32"/>
+              <path d="M16 6v36"/>
+              <path d="M32 6v36"/>
+              <path d="M16 24c2-2 4-3 8-3s6 1 8 3"/>
+              <line x1="8" y1="42" x2="40" y2="42"/>
+            </svg>
+          </div>
+          <h3>Decor</h3>
+          <p>From dreamy backdrops to statement décor, we bring your vision to life.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <!-- Lanterns icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 8v4"/><path d="M12 12c-3 0-4 2-4 5v3c0 3 1 5 4 5s4-2 4-5v-3c0-3-1-5-4-5z"/>
+              <line x1="12" y1="25" x2="12" y2="40"/>
+              <path d="M24 6v4"/><path d="M24 10c-3 0-4 2-4 5v3c0 3 1 5 4 5s4-2 4-5v-3c0-3-1-5-4-5z"/>
+              <line x1="24" y1="23" x2="24" y2="40"/>
+              <path d="M36 8v4"/><path d="M36 12c-3 0-4 2-4 5v3c0 3 1 5 4 5s4-2 4-5v-3c0-3-1-5-4-5z"/>
+              <line x1="36" y1="25" x2="36" y2="40"/>
+            </svg>
+          </div>
+          <h3>Experiences</h3>
+          <p>A curated experience scene and curated event unexperience.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <!-- Hands/heart icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 36s-10-6.5-10-14c0-4 3-7 7-7 1.5 0 2.5.5 3 1.5.5-1 1.5-1.5 3-1.5 4 0 7 3 7 7 0 7.5-10 14-10 14z"/>
+              <path d="M10 30c-2 3-3 7-2 10"/>
+              <path d="M38 30c2 3 3 7 2 10"/>
+            </svg>
+          </div>
+          <h3>Personalised Touch</h3>
+          <p>A warm hand-heart, marnment and every personalised touch.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <!-- Star/sparkle icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M11 37l4-4M33 11l4 4"/>
+              <path d="M24 16l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            </svg>
+          </div>
+          <h3>Magical Memories</h3>
+          <p>Magical magical memories osds and magical memories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders -->
+  <section class="section section--ivory" aria-label="Founders">
+    <div class="container text-center">
+      <div class="section-heading">
+        <span class="section-line"></span>
+        <h2>By the Founders</h2>
+        <span class="section-line"></span>
+      </div>
+
+      <div class="founders">
+        <div class="founders-photos">
+          <img src="/assets/hero/team.jpg" alt="Antima" class="founder-photo" width="80" height="80" loading="lazy" />
+          <img src="/assets/hero/team.jpg" alt="Shilpa" class="founder-photo" width="80" height="80" loading="lazy" />
+        </div>
+        <p class="founders-name">By Antima & Shilpa</p>
+        <p class="founders-tagline">Dream, Decorate, Celebrate</p>
+      </div>
+
+      <a href="/contact" class="btn btn-gold">Book Your Consultation</a>
     </div>
   </section>
 
   <!-- Gallery Strip -->
-  <section class="section section--ivory" aria-label="Featured work">
+  <section class="section section--cream" aria-label="Portfolio">
     <div class="container">
-      <div class="text-center reveal">
-        <h2>A Glimpse of Our Work</h2>
-        <div class="divider"></div>
+      <div class="section-heading">
+        <span class="section-line"></span>
+        <h2>Portfolio</h2>
+        <span class="section-line"></span>
       </div>
 
       <div class="gallery-strip reveal-stagger">
         <img src="/assets/gallery/preview-1.jpg" alt="Elegant floral wedding decoration" loading="lazy" width="400" height="400" />
-        <img src="/assets/gallery/preview-2.jpg" alt="Luxurious event backdrop with golden arches" loading="lazy" width="400" height="400" />
+        <img src="/assets/gallery/preview-2.jpg" alt="Luxurious event backdrop" loading="lazy" width="400" height="400" />
         <img src="/assets/gallery/preview-3.jpg" alt="Romantic candlelit dinner setup" loading="lazy" width="400" height="400" />
-        <img src="/assets/gallery/preview-4.jpg" alt="Pastel flower arrangements for celebration" loading="lazy" width="400" height="400" />
+        <img src="/assets/gallery/preview-4.jpg" alt="Pastel flower arrangements" loading="lazy" width="400" height="400" />
       </div>
 
       <div class="text-center">
@@ -121,182 +153,208 @@ import Ornament from '../components/Ornament.astro';
       </div>
     </div>
   </section>
-
-  <!-- Testimonials -->
-  <section class="section section--cream section--decorated" aria-label="What clients say">
-    <Ornament />
-    <Ornament position="bottom-right" />
-    <div class="container">
-      <div class="text-center reveal">
-        <h2>Kind Words</h2>
-        <div class="divider"></div>
-      </div>
-
-      <div class="testimonials-grid reveal-stagger">
-        <div class="testimonial">
-          <blockquote>"The mandap looked like something from a dream. Every single detail was perfect."</blockquote>
-          <footer>— Priya & Ramesh, Wedding</footer>
-        </div>
-        <div class="testimonial">
-          <blockquote>"Our office anniversary felt like a proper celebration for the first time. Flawless execution."</blockquote>
-          <footer>— Meera, Corporate Events</footer>
-        </div>
-        <div class="testimonial">
-          <blockquote>"They took my vague idea and turned it into something I didn't even know was possible."</blockquote>
-          <footer>— Ananya, Birthday Surprise</footer>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section section--blush" aria-label="Call to action">
-    <div class="container text-center reveal">
-      <h2>Ready to Create Something Beautiful?</h2>
-      <p class="section-intro">Tell us about your vision. We'll make it real.</p>
-      <a href="/contact" class="btn">Start Planning</a>
-    </div>
-  </section>
 </MainLayout>
 
 <style>
+  /* Hero */
   .hero {
-    min-height: 100vh;
-    padding-top: 5rem;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 4.5rem;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 100%);
   }
 
   .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
     padding: 2rem 1.5rem;
-    max-width: 52rem;
+    max-width: 48rem;
   }
 
-  .hero-title {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-    line-height: 1;
-  }
-
-  .hero-tagline {
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    letter-spacing: 0.4em;
+  .hero-subtitle {
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: rgba(17, 17, 17, 0.78);
-    margin-bottom: 1rem;
+    color: #C9A96E;
+    margin-bottom: 0.5rem;
   }
 
-  .hero-byline {
+  .hero-launching {
     font-family: var(--font-script);
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--gold);
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    color: #1B4D4A;
     margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .hero-desc {
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #2C3E3E;
+    max-width: 28rem;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
   }
 
   .hero-divider {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    width: 180px;
     justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
-  .hero-divider-line {
-    flex: 1;
+  .hero-line {
+    width: 60px;
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold));
+    background: #C9A96E;
   }
 
-  .hero-divider-line:last-child {
-    background: linear-gradient(to left, transparent, var(--gold));
-  }
-
-  .hero-divider-diamond {
-    color: var(--gold);
-    font-size: 0.6rem;
-  }
-
-  .hero-desc {
-    font-size: clamp(0.9rem, 2vw, 1.05rem);
-    color: rgba(17, 17, 17, 0.82);
-    max-width: 26rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+  .hero-heart {
+    color: #C9A96E;
+    font-size: 0.8rem;
   }
 
   .hero-motto {
     font-family: var(--font-script);
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    color: var(--teal-deep);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: #1B4D4A;
+  }
+
+  .hero-small-heart {
+    color: #C9A96E;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Section heading with lines */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .section-line {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: #C9A96E;
+  }
+
+  /* Services row */
+  .services-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-row {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .service-item {
+    text-align: center;
+  }
+
+  .service-icon {
+    color: #C9A96E;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-item h3 {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: #1B4D4A;
+  }
+
+  .service-item p {
+    font-size: 0.8rem;
+    color: rgba(17, 17, 17, 0.7);
+    line-height: 1.5;
+  }
+
+  /* Founders */
+  .founders {
     margin-bottom: 2rem;
   }
 
-  /* Feature icons — consistent SVG line style */
-  .hero-features {
+  .founders-photos {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.25rem 2rem;
-    margin-bottom: 2.5rem;
-    padding: 0 1rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
-  .hero-feature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .hero-feature-icon {
-    width: 2.75rem;
-    height: 2.75rem;
+  .founder-photo {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 1.5px solid rgba(201, 169, 110, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    background: rgba(245, 237, 216, 0.5);
-    transition: border-color 0.2s, transform 0.2s;
+    object-fit: cover;
+    border: 3px solid #C9A96E;
   }
 
-  .hero-feature:hover .hero-feature-icon {
-    border-color: var(--gold);
-    transform: scale(1.05);
+  .founders-name {
+    font-family: var(--font-script);
+    font-size: 1.6rem;
+    color: #1B4D4A;
+    margin-bottom: 0.25rem;
   }
 
-  .hero-feature-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(17, 17, 17, 0.8);
-    font-weight: 500;
-    text-align: center;
-  }
-
-  /* CTA */
-  .hero-cta {
-    display: block;
-    width: 100%;
-    max-width: 380px;
-    padding: 1rem 2rem;
-    background-color: #0d2927;
-    color: #fff;
-    text-align: center;
-    font-family: var(--font-sans);
+  .founders-tagline {
     font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    border-radius: 2px;
-    transition: background-color 0.2s, transform 0.2s;
+    color: rgba(17, 17, 17, 0.7);
+    letter-spacing: 0.05em;
   }
 
-  .hero-cta:hover {
-    background-color: #1B4D4A;
-    transform: translateY(-2px);
+  /* Gold button */
+  .btn-gold {
+    background-color: #C9A96E;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+  }
+
+  .btn-gold:hover {
+    background-color: #B8944E;
   }
 </style>

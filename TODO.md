@@ -17,85 +17,85 @@
 - Warm white: #FDF8F0
 - Script accents: gold/rose
 
-## TODO — Milestones (parallelizable)
+## TODO — Milestones
 
-### M1: Project Scaffold ✅ (done in this session)
+### M1: Project Scaffold ✅
 - [x] Create folder
-- [x] Init git + remote
+- [x] Init git + remote (theSnehaThing/aurascape)
 - [x] Initialize Astro project
 - [x] Tailwind CSS setup
 - [x] Basic directory structure
 - [x] Design tokens (CSS custom properties)
 
-### M2: Layout & Shared Components
-- [ ] Header with logo + nav (responsive)
-- [ ] Footer (contact, social links, copyright)
-- [ ] Cookie consent banner (GDPR-compliant)
-- [ ] Mobile navigation (hamburger)
-- [ ] Page layout wrapper (consistent spacing)
+### M2: Layout & Shared Components ✅
+- [x] Header with logo + nav (responsive)
+- [x] Footer (contact, social links, copyright)
+- [x] Cookie consent banner (GDPR-compliant)
+- [x] Mobile navigation (hamburger)
+- [x] Page layout wrapper (consistent spacing)
 
-### M3: Home Page
-- [ ] Hero section (brand image, tagline, CTA)
-- [ ] "What we do" section (3-4 services)
-- [ ] Featured gallery strip (3-4 images)
+### M3: Home Page ✅
+- [x] Hero section (brand image, tagline, CTA)
+- [x] "What we do" section (3 services)
+- [x] Featured gallery strip (4 images)
 - [ ] Testimonials / social proof placeholder
-- [ ] CTA section ("Plan your event")
-- [ ] Footer
+- [x] CTA section ("Plan your event")
+- [x] Footer
 
-### M4: About Us Page
-- [ ] Story section (Antima & Shilpa)
-- [ ] Values / philosophy
-- [ ] Team section (photos + bio)
+### M4: About Us Page ✅
+- [x] Story section (Antima & Shilpa)
+- [x] Values / philosophy (Dream/Decorate/Celebrate)
+- [x] Team section (photo + bio)
 - [ ] Journey / timeline
-- [ ] CTA
+- [x] CTA
 
-### M5: Gallery Page
-- [ ] Filterable grid (all / weddings / corporate / private)
-- [ ] Lightbox (click to expand)
-- [ ] Lazy loading
-- [ ] Alt text for SEO
-- [ ] Assets folder structure for adding photos
+### M5: Gallery Page ✅
+- [x] Filterable grid (all / weddings / corporate / private)
+- [x] Lightbox (click to expand)
+- [x] Lazy loading
+- [x] Alt text for SEO
+- [x] Assets folder structure for adding photos
 
-### M6: Contact Page
-- [ ] Inquiry form (name, email, phone, event type, date, message)
-- [ ] Form validation (client-side)
-- [ ] Formspree integration (email to their inbox)
-- [ ] Contact info (phone, email, location)
+### M6: Contact Page ✅
+- [x] Inquiry form (name, email, phone, event type, date, message)
+- [x] Form validation (client-side)
+- [x] Formspree integration (email to their inbox)
+- [x] Contact info (phone, email, location)
 - [ ] Map embed (optional)
-- [ ] Social links
+- [x] Social links (footer)
 
-### M7: SEO & Performance
-- [ ] Meta tags (title, description, OG, Twitter card)
-- [ ] Structured data (JSON-LD: LocalBusiness)
-- [ ] Sitemap.xml
-- [ ] robots.txt
-- [ ] Semantic HTML (h1, h2, article, etc.)
-- [ ] Image optimization (alt, loading, dimensions)
-- [ ] Favicon + apple-touch-icon
-- [ ] Lighthouse score target: 90+
+### M7: SEO & Performance ✅
+- [x] Meta tags (title, description, OG, Twitter card)
+- [x] Structured data (JSON-LD: LocalBusiness)
+- [x] Sitemap.xml (auto-generated via @astrojs/sitemap)
+- [x] robots.txt
+- [x] Semantic HTML (h1, h2, section, article, figure)
+- [x] Image optimization (alt, loading="lazy", dimensions)
+- [x] Favicon (SVG)
+- [ ] Lighthouse score target: 90+ (verify in QA)
 
-### M8: Cookie & Privacy Compliance
-- [ ] Cookie consent banner (accept/reject)
-- [ ] Privacy policy page (or section)
-- [ ] Only load analytics after consent
-- [ ] No user data stored without consent
-- [ ] Clear language about what's collected
+### M8: Cookie & Privacy Compliance ✅
+- [x] Cookie consent banner (accept/reject)
+- [x] Privacy policy page (/privacy)
+- [x] Only load analytics after consent (hook ready in CookieBanner)
+- [x] No user data stored without consent
+- [x] Clear language about what's collected
 
-### M9: Assets & Content
-- [ ] /public/assets/gallery/ — folder for event photos
-- [ ] /public/assets/hero/ — hero images
-- [ ] Free stock images for initial gallery (Unsplash/Pexels)
-- [ ] Logo files (SVG + PNG)
-- [ ] README for non-tech maintainers (how to add photos, edit text)
+### M9: Assets & Content ✅
+- [x] /public/assets/gallery/ — folder for event photos (12 placeholders)
+- [x] /public/assets/hero/ — hero images (3 placeholders)
+- [x] Placeholder images (SVG — swap with real photos)
+- [x] Logo file (SVG)
+- [x] MAINTAINERS.md for non-tech maintainers
 
-### M10: Deploy & Hosting
-- [ ] Dockerfile (nginx serving static site)
-- [ ] docker-compose.yml
-- [ ] Deploy to bugaboxes
+### M10: Deploy & Hosting 🟡
+- [x] Dockerfile (nginx serving static site)
+- [x] docker-compose.yml
+- [ ] Deploy to bugaboxes (can't SSH — needs manual step)
 - [ ] Domain + SSL setup
-- [ ] Build script (npm run build → serve dist/)
+- [x] Build script (npm run build → dist/ ready)
 
-### M11: QA & Polish
+### M11: QA & Polish ⬜
 - [ ] Responsive check (320/390/768/1440)
 - [ ] Accessibility (contrast, alt text, keyboard nav)
 - [ ] No horizontal overflow
@@ -104,15 +104,28 @@
 - [ ] Lighthouse audit
 - [ ] Final visual review
 
+## Remaining Work
+
+| Priority | Task | Effort |
+|----------|------|--------|
+| HIGH | Swap placeholder SVGs with real photos | 30 min (user) |
+| HIGH | Set up Formspree form ID in contact page | 5 min (user) |
+| HIGH | Deploy to bugaboxes + domain | 15 min |
+| MED | Add testimonials section to home | 15 min |
+| MED | Add map embed to contact | 10 min |
+| MED | QA: responsive + accessibility pass | 30 min |
+| LOW | Journey/timeline on About page | 20 min |
+| LOW | Lighthouse audit + fixes | 20 min |
+
 ## Parallelization Notes
-- M2 (layout) blocks M3-M6 (pages need header/footer)
-- M3, M4, M5, M6 can be built in parallel AFTER M2
-- M7, M8 can be done in parallel with M3-M6
-- M9 (assets) can be done at any time
-- M10, M11 are final steps
+- M3, M4, M5, M6 all DONE in parallel
+- M7, M8 done in parallel
+- M11 can be done by a separate agent (QA only, no code changes)
+- User tasks (photos, Formspree, domain) are independent of all dev work
 
 ## File Ownership (for parallel agents)
-- Agent A: M2 (layout) + M6 (contact)
-- Agent B: M3 (home) + M4 (about)
-- Agent C: M5 (gallery) + M7 (SEO) + M8 (cookies)
-- Agent D: M9 (assets) + M10 (deploy) + M11 (QA)
+- Agent A: M2 (layout) + M6 (contact) ✅ DONE
+- Agent B: M3 (home) + M4 (about) ✅ DONE
+- Agent C: M5 (gallery) + M7 (SEO) + M8 (cookies) ✅ DONE
+- Agent D: M9 (assets) + M10 (deploy) ✅ DONE
+- Agent E: M11 (QA) — available to start

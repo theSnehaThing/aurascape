@@ -1,65 +1,69 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Ornament from '../components/Ornament.astro';
+
+const features = [
+  { icon: '🌸', label: 'Stunning Decor' },
+  { icon: '✨', label: 'Beautiful Events' },
+  { icon: '💫', label: 'Unique Experiences' },
+  { icon: '💝', label: 'Personalised Touch' },
+  { icon: '⭐', label: 'Magical Memories' },
+];
 ---
 
 <MainLayout
   title="Aura & Scape — Luxury Event Planning & Decoration | Where Memories Become Magic"
   description="Aura & Scape is a luxury event planning and decoration company by Antima & Shilpa. We bring your vision to life with stunning decor, beautiful events, and unique experiences."
 >
-  <!-- Hero with parallax + ornaments -->
+  <!-- Hero — matches reference layout -->
   <section class="hero section--decorated" aria-label="Hero">
     <Ornament />
     <Ornament position="bottom-right" />
     <img src="/assets/hero/hero-bg.jpg" alt="" class="hero-bg" loading="eager" width="1920" height="1080" />
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
-      <p class="hero-script">Something magical is coming</p>
-      <h1>Aura <span class="amp">&</span> Scape</h1>
-      <p class="hero-tagline">Events &nbsp;·&nbsp; Decor &nbsp;·&nbsp; Experiences</p>
-      <div class="divider"></div>
-      <p class="hero-quote">"Where Memories Become Magic"</p>
-      <p class="hero-desc">From dreamy backdrops to statement décor, we bring your vision to life, one magical moment at a time.</p>
-      <a href="/contact" class="btn">Plan Your Event</a>
-    </div>
-  </section>
+      <h1 class="hero-title">
+        Aura <span class="amp">&</span> Scape
+      </h1>
 
-  <!-- Services -->
-  <section class="section section--cream section--decorated" aria-label="Our services">
-    <Ornament />
-    <Ornament position="bottom-right" />
-    <div class="container">
-      <div class="text-center reveal">
-        <h2>What We Do</h2>
-        <div class="divider"></div>
-        <p class="section-intro">Every celebration deserves to be extraordinary. Here's how we make it happen.</p>
+      <p class="hero-tagline">Events &nbsp;✦&nbsp; Decor &nbsp;✦&nbsp; Experiences</p>
+
+      <p class="hero-byline">By Antima & Shilpa</p>
+
+      <div class="hero-divider">
+        <span class="hero-divider-line"></span>
+        <span class="hero-divider-diamond">✦</span>
+        <span class="hero-divider-line"></span>
       </div>
 
-      <div class="services-grid reveal-stagger">
-        <div class="service service-card card-hover">
-          <div class="service-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m6.364-14.364l-12.728 12.728M21 12H3" /></svg>
-          </div>
-          <h3>Stunning Decor</h3>
-          <p>From florals to fairy lights, we craft spaces that take your breath away. Every detail curated, every corner considered.</p>
-        </div>
+      <p class="hero-subheading">Something magical is coming!</p>
+      <p class="hero-launching">We're Launching</p>
 
-        <div class="service service-card card-hover">
-          <div class="service-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><line x1="12" y1="3" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="21" /><line x1="3" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="21" y2="12" /></svg>
-          </div>
-          <h3>Beautiful Events</h3>
-          <p>Weddings, corporate gatherings, intimate celebrations — we plan seamless experiences from concept to the final sparkle.</p>
-        </div>
+      <p class="hero-desc">
+        Introducing Aura & Scape — where creativity meets elegance, and every
+        celebration becomes an unforgettable experience. From dreamy backdrops
+        to statement décor, we bring your vision to life, one magical moment
+        at a time.
+      </p>
 
-        <div class="service service-card card-hover">
-          <div class="service-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.714-1.607-2.376-2.733-4.312-2.733C5.099 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+      <p class="hero-motto">Where Memories Become Magic</p>
+      <span class="hero-heart">♥</span>
+
+      <!-- 5 Feature Icons -->
+      <div class="hero-features" role="list" aria-label="Our specialities">
+        {features.map((f) => (
+          <div class="hero-feature" role="listitem">
+            <span class="hero-feature-icon" aria-hidden="true">{f.icon}</span>
+            <span class="hero-feature-label">{f.label}</span>
           </div>
-          <h3>Unique Experiences</h3>
-          <p>Personalised touches that make your event unmistakably yours. Curated moments your guests will remember for years.</p>
-        </div>
+        ))}
       </div>
+
+      <!-- Full-width CTA -->
+      <a href="/contact" class="hero-cta">
+        Let's make your next celebration extraordinary! ♥
+      </a>
     </div>
   </section>
 
@@ -67,7 +71,7 @@ import Ornament from '../components/Ornament.astro';
   <section class="section section--ivory" aria-label="Featured work">
     <div class="container">
       <div class="text-center reveal">
-        <h2>A Glimpse</h2>
+        <h2>A Glimpse of Our Work</h2>
         <div class="divider"></div>
       </div>
 
@@ -120,3 +124,169 @@ import Ornament from '../components/Ornament.astro';
     </div>
   </section>
 </MainLayout>
+
+<style>
+  /* Hero — matches reference design */
+  .hero {
+    min-height: 100vh;
+    padding-top: 5rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 2rem 1.5rem;
+    max-width: 56rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.75);
+    margin-bottom: 1rem;
+  }
+
+  .hero-byline {
+    font-family: var(--font-script);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    width: 200px;
+    justify-content: center;
+  }
+
+  .hero-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+
+  .hero-divider-line:last-child {
+    background: linear-gradient(to left, transparent, var(--gold));
+  }
+
+  .hero-divider-diamond {
+    color: var(--gold);
+    font-size: 0.7rem;
+  }
+
+  .hero-subheading {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-launching {
+    font-family: var(--font-script);
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    color: var(--teal-deep);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-desc {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: rgba(17, 17, 17, 0.78);
+    max-width: 28rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-motto {
+    font-family: var(--font-script);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--teal-deep);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-heart {
+    color: var(--rose);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* 5 Feature icons */
+  .hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-features {
+      gap: 0.75rem 2rem;
+    }
+  }
+
+  .hero-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .hero-feature-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background: rgba(245, 237, 216, 0.6);
+  }
+
+  .hero-feature-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.75);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* Full-width CTA button */
+  .hero-cta {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 2rem;
+    background-color: #0d2927;
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  .hero-cta:hover {
+    background-color: #1B4D4A;
+    transform: translateY(-2px);
+  }
+</style>

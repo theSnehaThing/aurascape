@@ -51,16 +51,26 @@ body {
   font-family: var(--font-sans);
   color: #111;
   background-color: #F5F0E8;
-  background-image:
-    url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.07'%3E%3Cpath d='M100 300c0-50 30-80 60-80s60 30 60 80-30 80-60 80-60-30-60-80z'/%3E%3Cpath d='M400 150c0-40 25-65 50-65s50 25 50 65-25 65-50 65-50-25-50-65z'/%3E%3Cpath d='M250 450c0-35 20-55 40-55s40 20 40 55-20 55-40 55-40-20-40-55z'/%3E%3Ccircle cx='500' cy='400' r='30'/%3E%3Ccircle cx='150' cy='100' r='20'/%3E%3C/g%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 20% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(245, 230, 232, 0.12) 0%, transparent 50%);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+}
+
+/* Background layer (behind petals) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.08'%3E%3Cpath d='M100 300c0-50 30-80 60-80s60 30 60 80-30 80-60 80-60-30-60-80z'/%3E%3Cpath d='M400 150c0-40 25-65 50-65s50 25 50 65-25 65-50 65-50-25-50-65z'/%3E%3Cpath d='M250 450c0-35 20-55 40-55s40 20 40 55-20 55-40 55-40-20-40-55z'/%3E%3Ccircle cx='500' cy='400' r='30'/%3E%3Ccircle cx='150' cy='100' r='20'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 20% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(245, 230, 232, 0.12) 0%, transparent 50%);
+  background-color: #F5F0E8;
+  pointer-events: none;
 }
 
 main {
@@ -284,11 +294,12 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
 }
 
 .nav .btn {
-  padding: 0.55rem 1.4rem;
+  padding: 0.5rem 1.25rem;
   font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   background-color: #0d2927;
-  border: 2px solid #0d2927;
+  border: 1px solid #0d2927;
   color: #fff;
 }
 
@@ -1287,7 +1298,6 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
 /* Ensure content is above petals */
 header, main, footer {
   position: relative;
-  z-index: 1;
 }
 
 .petal {

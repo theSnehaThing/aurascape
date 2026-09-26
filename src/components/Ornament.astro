@@ -1,0 +1,28 @@
+---
+// Floral corner ornament — positioned absolutely in parent
+const { position = 'top-left' } = Astro.props;
+const posClass = position === 'bottom-right' ? 'ornament-bottom-right' : 'ornament-top-left';
+---
+
+<svg class={`ornament ${posClass}`} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Arch -->
+  <path d="M10 190 C10 80, 60 20, 150 10" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- Hanging lanterns -->
+  <line x1="60" y1="55" x2="60" y2="75" stroke="#C9A96E" stroke-width="1"/>
+  <ellipse cx="60" cy="80" rx="6" ry="8" fill="#C9A96E" opacity="0.3"/>
+  <line x1="90" y1="38" x2="90" y2="60" stroke="#C9A96E" stroke-width="1"/>
+  <ellipse cx="90" cy="65" rx="5" ry="7" fill="#C9A96E" opacity="0.3"/>
+  <line x1="120" y1="25" x2="120" y2="48" stroke="#C9A96E" stroke-width="1"/>
+  <ellipse cx="120" cy="53" rx="5" ry="7" fill="#C9A96E" opacity="0.3"/>
+  <!-- Flowers -->
+  <circle cx="145" cy="18" r="8" fill="#E8C4C8" opacity="0.6"/>
+  <circle cx="155" cy="12" r="6" fill="#D4727E" opacity="0.5"/>
+  <circle cx="138" cy="10" r="5" fill="#E8C4C8" opacity="0.5"/>
+  <circle cx="150" cy="25" r="4" fill="#D4727E" opacity="0.4"/>
+  <!-- Leaves -->
+  <path d="M140 30 C145 25, 150 28, 148 35" stroke="#2D6B67" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M130 20 C135 15, 140 18, 138 25" stroke="#2D6B67" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Small buds -->
+  <circle cx="160" cy="20" r="3" fill="#C9A96E" opacity="0.4"/>
+  <circle cx="135" cy="15" r="2" fill="#C9A96E" opacity="0.3"/>
+</svg>

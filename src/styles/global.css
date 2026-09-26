@@ -341,6 +341,15 @@ p {
 
 .nav .btn {
   padding: 10px 20px;
+  background: var(--accent-gold);
+  color: var(--white);
+  border: 1px solid var(--accent-gold);
+}
+
+.nav .btn:hover {
+  background: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-primary);
 }
 
 .menu-toggle {

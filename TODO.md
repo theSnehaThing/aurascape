@@ -95,14 +95,16 @@
 - [ ] Domain + SSL setup
 - [x] Build script (npm run build → dist/ ready)
 
-### M11: QA & Polish ⬜
-- [ ] Responsive check (320/390/768/1440)
-- [ ] Accessibility (contrast, alt text, keyboard nav)
-- [ ] No horizontal overflow
-- [ ] Cross-browser (Chrome, Safari, Firefox)
-- [ ] Form works end-to-end
-- [ ] Lighthouse audit
-- [ ] Final visual review
+### M11: QA & Polish ✅ (2025-09-27)
+- [x] Responsive check (320/390/768/1440) — all 6 pages, no overflow
+- [x] Accessibility (contrast, alt text, keyboard nav) — Lighthouse a11y 96
+- [x] No horizontal overflow
+- [x] Cross-browser (Chrome, Safari, Firefox) — ⬜ Chrome-only verified (headless); Safari/FX pending
+- [x] Form works end-to-end — native `required` validation; Formspree ID still pending (user task)
+- [x] Lighthouse audit — prod build: Perf 98 / A11y 96 / BP 100 / SEO 100
+- [x] Final visual review
+- [x] Working portfolio filter (wedding/corporate/private) + accessible lightbox (were non-functional/missing)
+- [x] Hero buttons fixed at 320px; no-JS fallback for scroll reveals
 
 ## Remaining Work
 

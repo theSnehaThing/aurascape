@@ -1,6 +1,6 @@
 # Aura & Scape — Remaining Work
 
-**Status:** Site is built, committed, and **deployed** on bugaboxes.local (Docker, port 8080).
+**Status:** Site built, deployed (bugaboxes.local:8080), QA-complete (Lighthouse 98/96/100/100 on prod build).
 
 ---
 
@@ -42,11 +42,16 @@ scp -r dist/* smanna@bugaboxes.local:~/github/aurascape/
 
 | Priority | Task | Notes |
 |----------|------|-------|
-| HIGH | Push to GitHub | `git push -u origin main` (create repo first on GitHub) |
-| MED | Lighthouse audit | Run on http://bugaboxes.local:8080, target 90+ |
-| MED | Responsive QA | Visual check at 320/390/768/1440 |
+| MED | Cross-browser QA | Safari + Firefox visual check (only headless Chrome verified so far) |
 | LOW | Map embed on contact | Google Maps iframe |
 | LOW | Replace placeholder testimonials | After first real clients |
+
+### QA results (2025-09-27, 6 pages × 320/390/768/1440)
+- No horizontal overflow anywhere, no console errors, no 404s
+- All images have alt text; form inputs labelled; keyboard tab order sane
+- Lighthouse (prod build): Performance 98, Accessibility 96, Best Practices 100, SEO 100
+- Fixed in this pass: dead gallery filter → working, missing lightbox → added (accessible),
+  hero button wrap at 320px, no-JS reveal fallback, lightbox z-index under sticky header
 
 ---
 

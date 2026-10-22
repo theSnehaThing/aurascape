@@ -65,7 +65,7 @@ Container:  aurascape-site
 Port:       8080 → 80
 Config:     ~/github/aurascape/nginx.conf
 Auto-restart: yes
-URL:        http://bugaboxes.local:8080
+URL:        https://events.auranscape.co.uk
 ```
 
 ### To stop/restart:
@@ -90,6 +90,6 @@ Remote:     git@github.com:theSnehaThing/aurascape.git
 Build:      npm run build → dist/
 Deploy:     scp -r dist/* smanna@bugaboxes.local:~/github/aurascape/
 Preview:    npm run dev → http://localhost:4321
-Live:       http://bugaboxes.local:8080
+Live:       https://events.auranscape.co.uk
 Maintainer: MAINTAINERS.md (for non-technical team)
 ```

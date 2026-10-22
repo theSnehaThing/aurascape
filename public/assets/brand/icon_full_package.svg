@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="190" viewBox="0 0 200 190" fill="none">
+  <g stroke="#B79055" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- gift box -->
+    <rect x="56" y="94" width="88" height="56" rx="4"/>
+    <!-- lid -->
+    <rect x="48" y="72" width="104" height="20" rx="4"/>
+    <!-- ribbon -->
+    <path d="M100 72 v78"/>
+    <!-- bow loops -->
+    <path d="M100 70 C 96 50, 76 48, 82 62 C 85 70, 93 71, 100 70"/>
+    <path d="M100 70 C 104 50, 124 48, 118 62 C 115 70, 107 71, 100 70"/>
+    <circle cx="100" cy="70" r="3.5"/>
+    <!-- sparkles -->
+    <circle cx="64" cy="40" r="3.5"/>
+    <circle cx="136" cy="38" r="3.5"/>
+  </g>
+</svg>

@@ -1,12 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="190" viewBox="0 0 200 190" fill="none">
-<defs>
-  <style>
-    .serif{font-family:EB Garamond, Cormorant Garamond, Georgia, serif;}
-    .script{font-family:FreeSerif, Georgia, serif; font-style:italic;}
-    .sans{font-family:Inter, Lato, Arial, sans-serif;}
-  </style>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#E1C26B"/><stop offset="50%" stop-color="#B79055"/><stop offset="100%" stop-color="#DCC27A"/>
-  </linearGradient>
-</defs>
-<g stroke="#B79055" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(0 0)"><path d="M70 35 H130 M80 55 H120 M88 55 V135 M112 55 V135 M70 135 H130"/><path d="M80 75 Q100 95 120 75"/></g></svg>
+  <g stroke="#B79055" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- centre petal -->
+    <path d="M100 46 Q114 84 100 122 Q86 84 100 46 Z"/>
+    <!-- inner petals -->
+    <path d="M74 62 Q94 92 100 122"/>
+    <path d="M126 62 Q106 92 100 122"/>
+    <!-- outer petals -->
+    <path d="M52 82 Q76 104 98 124"/>
+    <path d="M148 82 Q124 104 102 124"/>
+    <!-- base arcs -->
+    <path d="M62 134 Q100 156 138 134"/>
+    <path d="M78 148 Q100 160 122 148"/>
+  </g>
+</svg>

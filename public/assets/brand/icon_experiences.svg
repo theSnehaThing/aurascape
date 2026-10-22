@@ -1,12 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="190" viewBox="0 0 200 190" fill="none">
-<defs>
-  <style>
-    .serif{font-family:EB Garamond, Cormorant Garamond, Georgia, serif;}
-    .script{font-family:FreeSerif, Georgia, serif; font-style:italic;}
-    .sans{font-family:Inter, Lato, Arial, sans-serif;}
-  </style>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#E1C26B"/><stop offset="50%" stop-color="#B79055"/><stop offset="100%" stop-color="#DCC27A"/>
-  </linearGradient>
-</defs>
-<g stroke="#B79055" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(0 0)"><path d="M100 25 V150 M68 52 H132 M80 78 H120"/><path d="M82 112 C68 92 68 64 82 48 C96 64 96 92 82 112Z"/><path d="M118 112 C104 92 104 64 118 48 C132 64 132 92 118 112Z"/></g></svg>
+  <g stroke="#B79055" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- left flute -->
+    <path d="M64 44 H96 C96 70 90 84 80 90 C70 84 64 70 64 44 Z"/>
+    <path d="M80 90 v32"/>
+    <path d="M66 122 h28"/>
+    <!-- right flute, tilted in a toast -->
+    <g transform="rotate(14 120 90)">
+      <path d="M104 44 H136 C136 70 130 84 120 90 C110 84 104 70 104 44 Z"/>
+      <path d="M120 90 v32"/>
+      <path d="M106 122 h28"/>
+    </g>
+    <!-- bubbles -->
+    <circle cx="100" cy="34" r="4"/>
+    <circle cx="118" cy="24" r="3"/>
+    <circle cx="84" cy="24" r="3"/>
+  </g>
+</svg>

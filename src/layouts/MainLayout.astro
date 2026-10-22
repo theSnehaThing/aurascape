@@ -38,6 +38,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.site)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={title} />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content={title} />
@@ -66,6 +69,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "slogan": "Where Memories Become Magic",
       "url": "https://events.auranscape.co.uk",
       "email": "auranscape@gmail.com",
+      "image": "https://events.auranscape.co.uk/assets/hero/og-image.jpg",
+      "logo": "https://events.auranscape.co.uk/assets/logos/logo-main.png",
+      "founder": [
+        { "@type": "Person", "name": "Antima Jain" },
+        { "@type": "Person", "name": "Shilpa Saha" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/auranscape"
+      ],
       "priceRange": "£££",
       "areaServed": {
         "@type": "City",

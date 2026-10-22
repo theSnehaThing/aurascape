@@ -21,3 +21,9 @@ Replace with real client photos when available.
 | preview-2.jpg | CC0 (public domain) | Free candle lights fire dark | https://www.rawpixel.com/image/5919972/photo-image-lights-public-domain-fire |
 | preview-3.jpg | CC0 (public domain) | Dinner tables set at conference center - closeup | https://www.flickr.com/photos/29507259@N02/5770850869 |
 | preview-4.jpg | CC0 (public domain) | Tiny Flower Bouquet | https://www.flickr.com/photos/148470980@N05/41599837155 |
+
+## Founder Portraits
+
+`public/assets/hero/antima.jpg` and `public/assets/hero/shilpa.jpg` are real
+photos of the founders, provided by the founders themselves. No attribution
+required. Cropped to 4:5 (480×600) to match the site's portrait frames.

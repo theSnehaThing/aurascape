@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180" viewBox="0 0 500 180" fill="none">
+<defs>
+  <style>
+    .serif{font-family:EB Garamond, Cormorant Garamond, Georgia, serif;}
+    .script{font-family:FreeSerif, Georgia, serif; font-style:italic;}
+    .sans{font-family:Inter, Lato, Arial, sans-serif;}
+  </style>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#E1C26B"/><stop offset="50%" stop-color="#B79055"/><stop offset="100%" stop-color="#DCC27A"/>
+  </linearGradient>
+</defs>
+<path d="M80 47.5 L90.2 74.8 L117.5 85 L90.2 95.2 L80 122.5 L69.8 95.2 L42.5 85 L69.8 74.8 Z" fill="none" stroke="#B79055" stroke-width="3"/><path d="M250 65.0 L255.44 79.56 L270.0 85 L255.44 90.44 L250 105.0 L244.56 90.44 L230.0 85 L244.56 79.56 Z" fill="none" stroke="#B79055" stroke-width="3"/><path d="M420 55.0 L428.16 76.84 L450.0 85 L428.16 93.16 L420 115.0 L411.84 93.16 L390.0 85 L411.84 76.84 Z" fill="none" stroke="#B79055" stroke-width="3"/></svg>

@@ -28,7 +28,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <meta property="og:site_name" content="Aura & Scape" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
@@ -57,16 +61,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Aura & Scape",
-      "description": "Luxury event planning and decoration company. Events, Decor, Experiences by Antima & Shilpa.",
-      "url": "https://bugaboxes.com",
-      "telephone": "+91-XXXXX-XXXXX",
+      "alternateName": "Aura and Scape",
+      "description": "Luxury event planning and decoration studio. Events, Decor and Experiences by Antima & Shilpa, Edinburgh, Scotland.",
+      "slogan": "Where Memories Become Magic",
+      "url": "https://events.auranscape.co.uk",
       "email": "hello@aurascape.in",
+      "priceRange": "£££",
+      "areaServed": {
+        "@type": "City",
+        "name": "Edinburgh"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Edinburgh",
         "addressRegion": "Scotland",
         "addressCountry": "GB"
-      }
+      },
+      "knowsAbout": ["Event planning", "Wedding decoration", "Floral design", "Tablescapes", "Event lighting", "Guest experiences"]
     }
   </script>
 </head>

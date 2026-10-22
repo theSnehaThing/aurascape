@@ -3,19 +3,21 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout
-  title="Aura & Scape - Events, Decor, Experiences"
-  description="Aura & Scape — Where creativity meets elegance. Events, Decor, Experiences by Antima & Shilpa. Edinburgh, Scotland."
+  title="Aura & Scape | Luxury Event Planning, Decor & Experiences in Edinburgh"
+  description="Aura & Scape is a luxury event planning and decoration studio in Edinburgh, Scotland — weddings, private celebrations and corporate events by Antima & Shilpa. Where memories become magic."
 >
   <!-- Hero -->
   <section class="hero" aria-label="Hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-      <h1>Where Memories Become Magic</h1>
+      <p class="hero-eyebrow">Edinburgh &middot; Scotland</p>
+      <h1>Where Memories<br>become <span class="hero-accent">magic</span></h1>
+      <p class="hero-tagline">Event planning, styling and guest experiences — thoughtfully shaped around the people, place and feeling that matter to you.</p>
       <p class="hero-subtitle">DREAM &bull; DECORATE &bull; CELEBRATE</p>
       <div class="hero-buttons">
-        <a href="/contact" class="btn-primary">Book a Consultation</a>
-        <a href="/portfolio" class="btn-secondary">View Portfolio</a>
+        <a href="/contact" class="btn-primary">Book Your Consultation</a>
+        <a href="/portfolio" class="btn-secondary">Explore the Work</a>
       </div>
     </div>
   </section>
@@ -32,11 +34,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="services-grid reveal-stagger">
         <div class="service-card">
           <div class="service-icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 48V22C10 12 18 6 28 6s18 6 18 16v26"/>
-              <path d="M17 48V24c0-6 3-10 11-10s11 4 11 10v24"/>
-              <line x1="8" y1="48" x2="48" y2="48"/>
-            </svg>
+            <img src="/assets/brand/icon_events.svg" alt="" width="64" height="61" aria-hidden="true" />
           </div>
           <h3>Events</h3>
           <p>From intimate gatherings to grand celebrations, we craft unforgettable moments with elegance and precision.</p>
@@ -44,13 +42,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
         <div class="service-card">
           <div class="service-icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="10" y="8" width="36" height="40" rx="1"/>
-              <path d="M10 8h36"/>
-              <path d="M20 8v40"/>
-              <path d="M36 8v40"/>
-              <path d="M20 28c3-3 5-4 8-4s5 1 8 4"/>
-            </svg>
+            <img src="/assets/brand/icon_decor.svg" alt="" width="64" height="61" aria-hidden="true" />
           </div>
           <h3>Decor</h3>
           <p>Dreamy backdrops, statement florals, and curated styling that brings your vision to life in every detail.</p>
@@ -58,14 +50,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
         <div class="service-card">
           <div class="service-icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 10v4"/><path d="M14 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
-              <line x1="14" y1="30" x2="14" y2="46"/>
-              <path d="M28 8v4"/><path d="M28 12c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
-              <line x1="28" y1="28" x2="28" y2="46"/>
-              <path d="M42 10v4"/><path d="M42 14c-3 0-5 2-5 6v4c0 4 2 6 5 6s5-2 5-6v-4c0-4-2-6-5-6z"/>
-              <line x1="42" y1="30" x2="42" y2="46"/>
-            </svg>
+            <img src="/assets/brand/icon_experiences.svg" alt="" width="64" height="61" aria-hidden="true" />
           </div>
           <h3>Experiences</h3>
           <p>Curated sensory moments — live music, fragrance stations, and interactive displays that make guests feel special.</p>
@@ -90,19 +75,20 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="founders-row reveal">
         <div class="founder">
           <div class="image-wrapper">
-            <img src="/assets/hero/antima.jpg" alt="Antima" class="founder-photo" width="240" height="300" loading="lazy" />
+            <img src="/assets/hero/antima.jpg?v=2" alt="Portrait of Antima, Co-Founder of Aura &amp; Scape" class="founder-photo" width="240" height="300" loading="lazy" />
           </div>
           <h3>Antima</h3>
           <p class="text-muted">Co-Founder</p>
         </div>
         <div class="founder">
           <div class="image-wrapper">
-            <img src="/assets/hero/shilpa.jpg" alt="Shilpa" class="founder-photo" width="240" height="300" loading="lazy" />
+            <img src="/assets/hero/shilpa.jpg?v=2" alt="Portrait of Shilpa, Co-Founder of Aura &amp; Scape" class="founder-photo" width="240" height="300" loading="lazy" />
           </div>
           <h3>Shilpa</h3>
           <p class="text-muted">Co-Founder</p>
         </div>
       </div>
+      <p class="founders-script">By Antima &amp; Shilpa</p>
 
       <blockquote class="founder-quote">
         "Where creativity meets elegance, and every celebration becomes an unforgettable experience."
@@ -114,6 +100,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   <!-- Testimonials -->
   <section class="section testimonial-section" aria-label="Testimonials">
+    <img src="/assets/brand/12_heart_divider.svg" alt="" class="section-divider" width="300" height="42" loading="lazy" aria-hidden="true" />
     <div class="container">
       <div class="section-heading">
         <span class="section-line"></span>
@@ -155,7 +142,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
 
       <div class="text-center" style="margin-top: 40px;">
-        <a href="/portfolio" class="btn-outline">View Full Gallery</a>
+        <a href="/portfolio" class="btn-outline">View the Portfolio</a>
       </div>
     </div>
   </section>
@@ -219,11 +206,42 @@ import MainLayout from '../layouts/MainLayout.astro';
     max-width: 48rem;
   }
 
+  .section-divider {
+    display: block;
+    width: 300px;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto 24px;
+    opacity: 0.75;
+  }
+
+  .hero-eyebrow {
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 18px;
+  }
+
   .hero-content h1 {
     color: var(--text-main);
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 600;
-    margin-bottom: 16px;
+    line-height: 1.12;
+    margin-bottom: 20px;
+  }
+
+  .hero-accent {
+    font-style: italic;
+    color: var(--accent-gold);
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 34rem;
+    margin: 0 auto 24px;
+    line-height: 1.7;
   }
 
   @media (max-width: 768px) {
@@ -317,8 +335,15 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .founder .image-wrapper {
-    border-radius: 120px 120px 0 0;
+    border-radius: 10px;
     display: inline-block;
+  }
+
+  .founders-script {
+    font-family: var(--font-script);
+    font-size: 30px;
+    color: var(--text-main);
+    margin: -12px 0 28px;
   }
 
   .founder-photo {
@@ -329,8 +354,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   @media (max-width: 768px) {
-    .founder-photo { width: 180px; height: 220px; }
-    .founder .image-wrapper { border-radius: 90px 90px 0 0; }
+    .founder-photo { width: 180px; height: 225px; }
   }
 
   .founder h3 {

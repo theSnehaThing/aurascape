@@ -37,7 +37,6 @@ and brand pieces provided by the founders — no attribution required:
 | 18.jpg | Guest with decorated cycle at Garba Night |
 | 19.jpg | Brand contact flyer |
 | 20.jpg | Unveiling announcement — 10th October |
-| 21.jpg | Founders at Interrail event |
 | 22.jpg | Logo — Events, Decor, Experiences |
 | 23.jpg | Finished Garba Night stage |
 

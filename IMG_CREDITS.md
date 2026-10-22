@@ -22,6 +22,25 @@ Replace with real client photos when available.
 | preview-3.jpg | CC0 (public domain) | Dinner tables set at conference center - closeup | https://www.flickr.com/photos/29507259@N02/5770850869 |
 | preview-4.jpg | CC0 (public domain) | Tiny Flower Bouquet | https://www.flickr.com/photos/148470980@N05/41599837155 |
 
+## Real Work (added 2026-10-22)
+
+`public/assets/gallery/13.jpg` – `23.jpg` are real Aura & Scape work photos
+and brand pieces provided by the founders — no attribution required:
+
+| File | Content |
+|---|---|
+| 13.jpg | Brand flyer — "Where Moments Become Magic" |
+| 14.jpg | Happy Diwali stage backdrop |
+| 15.jpg | Garba Night backdrop setup (in progress) |
+| 16.jpg | Garba Night backdrop setup (wide) |
+| 17.jpg | Garba Night completed installation with cycle |
+| 18.jpg | Guest with decorated cycle at Garba Night |
+| 19.jpg | Brand contact flyer |
+| 20.jpg | Unveiling announcement — 10th October |
+| 21.jpg | Founders at Interrail event |
+| 22.jpg | Logo — Events, Decor, Experiences |
+| 23.jpg | Finished Garba Night stage |
+
 ## Founder Portraits
 
 `public/assets/hero/antima.jpg` and `public/assets/hero/shilpa.jpg` are real

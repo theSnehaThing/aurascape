@@ -24,7 +24,6 @@ and brand pieces provided by the founders — no attribution required:
 | File | Content |
 |---|---|
 | 13.jpg | Brand flyer — "Where Moments Become Magic" |
-| 14.jpg | Happy Diwali stage backdrop |
 | 15.jpg | Garba Night backdrop setup (in progress) |
 | 16.jpg | Garba Night backdrop setup (wide) |
 | 17.jpg | Garba Night completed installation with cycle |

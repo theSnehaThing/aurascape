@@ -644,6 +644,36 @@ header, main, footer {
   background: var(--bg-secondary);
 }
 
+/* grid layout for multiple testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.testimonial-grid .testimonial-card {
+  max-width: none;
+  margin: 0;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-grid .testimonial-quote {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .testimonial-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .testimonial-grid .testimonial-card { padding: 40px; }
+  .testimonial-grid .testimonial-quote { font-size: 19px; }
+}
+
 .testimonial-card {
   max-width: 640px;
   margin: 0 auto;

@@ -17,7 +17,7 @@
   /* Color Palette */
   --bg-primary: #FBF8F3;
   --bg-secondary: #F7EFEF;
-  --text-main: #193F64;
+  --text-main: #153552;
   --text-muted: #6E655F;
   --accent-gold: #D4AF37;
   --accent-warm-gold: #B79055;
@@ -72,7 +72,7 @@ body::before {
     url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E"),
     radial-gradient(ellipse at 15% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
     radial-gradient(ellipse at 85% 80%, rgba(217, 162, 168, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(25, 63, 100, 0.02) 0%, transparent 60%);
+    radial-gradient(ellipse at 50% 50%, rgba(21, 53, 82, 0.02) 0%, transparent 60%);
   background-color: var(--bg-primary);
   pointer-events: none;
 }
@@ -223,7 +223,7 @@ p {
   padding: 40px 28px;
   box-shadow: 
     0 4px 16px rgba(217, 162, 168, 0.08),
-    0 1px 4px rgba(25, 63, 100, 0.03),
+    0 1px 4px rgba(21, 53, 82, 0.03),
     inset 0 0 0 1px rgba(251, 248, 243, 0.5);
   position: relative;
   transition: all 0.3s ease;
@@ -244,7 +244,7 @@ p {
   transform: translateY(-4px);
   box-shadow: 
     0 12px 32px rgba(217, 162, 168, 0.12),
-    0 4px 12px rgba(25, 63, 100, 0.05),
+    0 4px 12px rgba(21, 53, 82, 0.05),
     inset 0 0 0 1px rgba(251, 248, 243, 0.5);
 }
 
@@ -624,13 +624,13 @@ header, main, footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(25, 63, 100, 0.3);
+  box-shadow: 0 4px 20px rgba(21, 53, 82, 0.3);
   transition: all 0.3s ease;
 }
 
 .floating-wa:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(25, 63, 100, 0.4);
+  box-shadow: 0 8px 28px rgba(21, 53, 82, 0.4);
 }
 
 .floating-wa svg {

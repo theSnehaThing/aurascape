@@ -20,7 +20,10 @@ import MainLayout from '../layouts/MainLayout.astro';
   <section class="section section--cream">
     <div class="container">
       <div class="form-container reveal">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="inquiry-form" id="enquiry-form" novalidate>
+        <form action="https://formsubmit.co/ajax/hello@auranscape.co.uk" method="POST" class="inquiry-form" id="enquiry-form" novalidate>
+          <input type="hidden" name="_subject" value="New enquiry — Aura & Scape website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name <span class="req">*</span></label>
@@ -102,6 +105,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           </div>
 
           <button type="submit" class="submit-btn">Send Enquiry</button>
+          <p class="form-error-msg" id="form-error" hidden></p>
         </form>
 
         <div class="form-success" id="form-success" hidden>
@@ -217,6 +221,13 @@ import MainLayout from '../layouts/MainLayout.astro';
     border-color: #A3453F;
   }
 
+  .form-error-msg {
+    margin-top: 16px;
+    color: #A3453F;
+    font-size: 14px;
+    text-align: center;
+  }
+
   .form-success {
     max-width: 720px;
     margin: 0 auto;
@@ -286,7 +297,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       venue: 'Please tell us where the event is.',
       guests: 'Please give an approximate guest count.',
     };
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let valid = true;
       let firstBad = null;
@@ -308,9 +319,24 @@ import MainLayout from '../layouts/MainLayout.astro';
         firstBad.focus();
         return;
       }
-      form.hidden = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
+      const errEl = document.getElementById('form-error');
+      errEl.hidden = true;
+      const btn = form.querySelector('button[type=submit]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        if (!res.ok) throw new Error('request failed');
+        form.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Send Enquiry';
+        errEl.textContent = 'Sorry — your message could not be sent. Please try again, or email us directly at auranscape@gmail.com.';
+        errEl.hidden = false;
+        errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, { passive: false });
   }
 </script>

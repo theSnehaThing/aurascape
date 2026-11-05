@@ -177,9 +177,9 @@ p {
   display: inline-block;
   padding: 16px 36px;
   background: var(--accent-gold);
-  color: var(--white);
+  color: var(--text-main);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
@@ -367,8 +367,9 @@ p {
 .nav .btn {
   padding: 10px 20px;
   background: var(--accent-gold);
-  color: var(--white);
+  color: var(--text-main);
   border: 1px solid var(--accent-gold);
+  font-weight: 600;
 }
 
 .nav .btn:hover {
@@ -417,8 +418,9 @@ p {
 
 .mobile-menu .btn {
   background: var(--accent-gold);
-  color: var(--white);
+  color: var(--text-main);
   border: 1px solid var(--accent-gold);
+  font-weight: 600;
 }
 
 .mobile-menu .btn:hover {
@@ -442,13 +444,13 @@ p {
   margin: 0 auto;
 }
 
-.footer h3 {
+.footer h2 {
   font-size: 24px;
   color: var(--bg-primary);
   margin-bottom: 8px;
 }
 
-.footer h4 {
+.footer h3 {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -492,7 +494,7 @@ p {
 }
 
 .footer-bottom a {
-  color: rgba(251, 248, 243, 0.5);
+  color: rgba(251, 248, 243, 0.75);
 }
 
 .footer-bottom a:hover {
@@ -537,7 +539,7 @@ header, main, footer {
 }
 
 .cookie-text a {
-  color: var(--accent-gold);
+  color: #7E6215;
   text-decoration: underline;
 }
 
@@ -708,8 +710,21 @@ header, main, footer {
 
 .testimonial-date {
   font-size: 12px;
-  color: var(--accent-rose);
+  color: var(--text-muted);
   margin-top: 4px;
+}
+
+/* --- Screen-reader only --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* --- Utility --- */

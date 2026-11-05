@@ -20,6 +20,12 @@ import MainLayout from '../layouts/MainLayout.astro';
   <section class="section section--cream">
     <div class="container">
       <div class="about-grid reveal">
+        <div class="about-text">
+          <h2>Two Friends, One Dream</h2>
+          <p>Aura & Scape was born from a simple belief: every celebration should feel like a story worth remembering. We're Antima and Shilpa — two friends who found their calling in the art of transformation.</p>
+          <p>What started as decorating a friend's intimate gathering grew into a shared passion for crafting spaces that don't just look beautiful — they make you <em>feel</em> something.</p>
+          <p>Today, we pour that same care into every event we touch. Whether it's a grand wedding or a quiet anniversary, we bring the same energy: attention to detail, a love of colour, and a genuine desire to see your face when you walk into the space we've created.</p>
+        </div>
         <div class="about-photos">
           <div class="founder">
             <img src="/assets/hero/antima.jpg?v=4" alt="Antima, co-founder of Aura and Scape" class="founder-photo" width="240" height="300" loading="lazy" />
@@ -31,12 +37,6 @@ import MainLayout from '../layouts/MainLayout.astro';
             <h3>Shilpa</h3>
             <p class="text-muted">Co-Founder</p>
           </div>
-        </div>
-        <div class="about-text">
-          <h2>Two Friends, One Dream</h2>
-          <p>Aura & Scape was born from a simple belief: every celebration should feel like a story worth remembering. We're Antima and Shilpa — two friends who found their calling in the art of transformation.</p>
-          <p>What started as decorating a friend's intimate gathering grew into a shared passion for crafting spaces that don't just look beautiful — they make you <em>feel</em> something.</p>
-          <p>Today, we pour that same care into every event we touch. Whether it's a grand wedding or a quiet anniversary, we bring the same energy: attention to detail, a love of colour, and a genuine desire to see your face when you walk into the space we've created.</p>
         </div>
       </div>
     </div>
@@ -134,8 +134,14 @@ import MainLayout from '../layouts/MainLayout.astro';
     align-items: center;
   }
 
+  /* text block comes first in the DOM (h2 before h3); keep photos on the left */
+  .about-photos { grid-column: 1; grid-row: 1; }
+  .about-text { grid-column: 2; grid-row: 1; }
+
   @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-photos { grid-column: auto; grid-row: auto; order: -1; }
+    .about-text { grid-column: auto; grid-row: auto; }
   }
 
   .about-photos {
